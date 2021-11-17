@@ -2,14 +2,14 @@
 This repository implements SpeedScore, a web app that enables users to log, analyze, share, and discuss their speedgolf rounds and experiences. SpeedScore is built using MongoDB, Express.js, React.js, and Node.js.
 
 ## Link to Deployed App
-You can access our team's deployed app at [this Heroku site](https://ourapp.herokuapp.com)
+You can access our team's deployed app at [this Heroku site](https://tp-alpha.herokuapp.com/)
 
 ## Team members
-1. **Team leader:** *Hung Luu (GitHub Id)*
-1. *Brian Schimert (GitHub Id)*
-1. *Desmond Yancey (GitHub Id)*
-1. *Joshua Stallworth (GitHub Id)*
-1. *Turner Smith (GitHub Id)*
+1. **Team leader:** *Hung Luu (hung-luu)*
+1. *Brian Schimert (BrianSchimert)*
+1. *Desmond Yancey (d5k1y02)*
+1. *Joshua Stallworth (Atmospherex)*
+1. *Turner Smith (Turner12)*
 
 ## Milestone 0 (Due 11/19)
 
@@ -26,7 +26,28 @@ You can access our team's deployed app at [this Heroku site](https://ourapp.hero
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>5</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>100</td><td></td>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/10">Issue 10</a></td><td><a href="https://github.com/PR">PR #</a></td><td>5</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/11">Issue 11</a></td><td><a href="https://github.com/PR">PR #</a></td><td>3</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/12">Issue 12</a></td><td><a href="https://github.com/PR">PR #</a></td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/1">Issue 1</a></td><td><a href="https://github.com/PR">PR #</a></td><td>3</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/3">Issue 3</a></td><td><a href="https://github.com/PR">PR #</a></td><td>3</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/8">Issue 8</a></td><td><a href="https://github.com/PR">PR #</a></td><td>5</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/9">Issue 9</a></td><td><a href="https://github.com/PR">PR #</a></td><td>5</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>100</td><td></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/6">Issue 6</a></td><td><a href="https://github.com/PR">PR #</a></td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>100</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>3</td><td>0</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>40</td><td>Updated database schema. Updated server routes. Did not implement UI.</td>
@@ -39,11 +60,11 @@ You can access our team's deployed app at [this Heroku site](https://ourapp.hero
 #### Context Statements
 | Team Member | Context Statement |
 |-------------|-------------------|
-|TM1| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM2| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM3| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM4| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM5| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
+|TM1| Setup MongoDB, add Google OAuth |
+|TM2| Deploy app to Heroku,  complete milstone reports|
+|TM3| Delete speedscore rounds, update speedscore rounds |
+|TM4| testing |
+|TM5| testing |
 
 ### Testing
 
@@ -98,27 +119,6 @@ You can access our team's deployed app at [this Heroku site](https://ourapp.hero
   </tbody>
 </table>
   
-#### Face-to-Face Meetings
-<table> 
-  <thead>
-    <tr>
-      <th colspan="2"></th><th colspan="5">In attendance?</th><th></th>
-    </tr> 
-    <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>Notes</th>
-    </tr>
-  </thead> 
-  <tbody>
-    <tr>
-      <td>11/10/21</td><td>45</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>We met in CUB conference room</td>
-    </tr>
-     <tr>
-      <td>11/14/21</td><td>20</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td><td>We met at Starbucks for coffee</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>65</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td><td></td>
-    </tr>
-  </tbody>
-</table>
 
 #### Context Statements
 | Team Member | Context Statement |
