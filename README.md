@@ -74,7 +74,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   
 ### Communication
  
-#### Slack Messages
+#### Discord Messages
 <table> 
   <thead>
     <tr>
@@ -133,19 +133,19 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
 [Link to Recording](https://wsu.zoom.us/recording)
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - Linking our work together (Heroku, MongoDB)
+  - Fast responses for questions in Discord
+  - Use of Kanban board to track issues
+ 
   
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+  - More frequent communication
+  - Finding good times for all 5 members to meet
+  - Trying to start work earlier and commit more frequently
   
 #### Changes we plan to implement in next milestone period
-  - Item 1
-  - Item 2
-  - Item x
+  - Daily status updates (even if no changes)
+  - Establish set meeting times that work for everybody throughout the milestone period
 
 
 
@@ -266,24 +266,18 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
 |TM3| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |TM4| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |TM5| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+
 ### Retrospective
 
 [Link to Recording](https://wsu.zoom.us/recording)
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
-  
+ 
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+
   
 #### Changes we plan to implement in next milestone period
-  - Item 1
-  - Item 2
-  - Item x
+
   
 ## Milestone 2 (Due 12/10)
 
