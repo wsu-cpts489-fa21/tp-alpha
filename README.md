@@ -122,11 +122,11 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM2| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM3| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM4| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM5| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Hung| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Brian| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Desmond| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Josh| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Turner| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
 
