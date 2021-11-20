@@ -108,7 +108,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   </thead> 
   <tbody>
     <tr>
-      <td>11/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td></td>
+      <td>11/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
     </tr>
      <tr>
       <td>11/12/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
