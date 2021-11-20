@@ -129,8 +129,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
 |Turner| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
-
-[Link to Recording](https://wsu.zoom.us/recording)
+See RetrospectiveMeetings folder in branch "main".
 
 #### What went well
   - Linking our work together (Heroku, MongoDB)
