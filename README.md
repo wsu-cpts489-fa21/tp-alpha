@@ -220,17 +220,23 @@ See RetrospectiveMeetings folder in branch "main".
       <th colspan="2"></th><th colspan="5">In attendance?</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Duration (min)</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>17</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td>
+      <td>11/10/21</td><td>60</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
     </tr>
      <tr>
-      <td>11/12/21</td><td>31</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td>
+      <td>11/12/21</td><td>60</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>48</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td>
+     <tr>
+      <td>11/17/21</td><td>60</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
+    </tr>
+     <tr>
+      <td>11/19/21</td><td>120</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>340</b></td><td><b>4</b></td><td><b>2</b></td><td><b>4</b></td><td><b>4</b></td><td><b>0</b></td>
     </tr>
   </tbody>
 </table>
