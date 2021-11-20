@@ -128,7 +128,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|Hung| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Hung| We were pretty successful in communicating with each other. Everyone replied in a timely manner. We decided to switch to Discord to communicate as it is a more effective system.  |
 |Brian| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Desmond| Communication seems to be good overall in this team. I was able to quickly get access to our database and heroku upon request. We have had a little trouble scheduling meeting times, but that is mostly due to situations out of our control thus far. |<*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Josh| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
