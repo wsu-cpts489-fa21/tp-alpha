@@ -61,7 +61,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
 |Hung| Setup MongoDB, add Google OAuth | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Brian| Deploy app to Heroku,  complete milstone reports| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Brian| Deploy app to Heroku,  complete milestone reports| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Desmond| Delete speedscore rounds, update speedscore rounds | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Josh| testing | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Turner| testing | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
