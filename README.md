@@ -119,7 +119,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
      <tr>
       <td>11/19/21</td><td>120</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>340</b></td><td><b>4</b></td><td><b>2</b></td><td><b>4</b></td><td><b>4</b></td><td><b>0</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>340</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>0</b></td>
     </tr>
   </tbody>
 </table>
