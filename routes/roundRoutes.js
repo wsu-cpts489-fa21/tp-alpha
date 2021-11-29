@@ -71,9 +71,71 @@ roundRoute.get('/rounds/:userId', async(req, res) => {
 //UPDATE round route: Updates a specific round for a given user
 //in the users collection (PUT)
 //TO DO: Implement this route
-
+roundRoute.put('/rounds/:userId/:roundId', async (req, res, next) => {
+  console.log("in /rounds (PUT) route with params = " + 
+              JSON.stringify(req.params) + " and body = " + 
+              JSON.stringify(req.body));
+ /*  if (!req.body.hasOwnProperty("date") || 
+      !req.body.hasOwnProperty("course") || 
+      !req.body.hasOwnProperty("type") ||
+      !req.body.hasOwnProperty("holes") || 
+      !req.body.hasOwnProperty("strokes") ||
+      !req.body.hasOwnProperty("minutes") ||
+      !req.body.hasOwnProperty("seconds") || 
+      !req.body.hasOwnProperty("notes")) {
+    //Body does not contain correct properties
+    return res.status(400).send("POST request on /rounds formulated incorrectly." +
+      "Body must contain all 8 required fields: date, course, type, holes, strokes, " +
+      "minutes, seconds, notes.");
+  } */
+  try {
+    //const round = new Round(req.body);
+    //const error = round.validateSync();
+   // if (error) { //Schema validation error occurred
+    //  return res.status(400).send("Round not modified. " + error.message);
+   // }
+    const status = await User.updateOne(
+      {"accountData.id": req.params.userId, "rounds._id": req.params.roundId},
+      {$set: {rounds: req.body}});
+    if (status.modifiedCount != 1) {
+      return res.status(400).send("Round not modified. "+
+        "User '" + req.params.userId + "' does not exist.");
+    } else {
+      return res.status(201).send("Round successfully modified.");
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(400).send("Round not modified. " +
+      "Unexpected error occurred: " + err);
+  } 
+});
 //DELETE round route: Deletes a specific round for a given user
 //in the users collection (DELETE)
 //TO DO: Implement this route
 
+roundRoute.delete('/rounds/:userId/:roundId', async (req, res, next) => {
+  console.log("in /rounds (delete) route with params = " + 
+              JSON.stringify(req.params) + " and body = " + 
+              JSON.stringify(req.body));           
+  try {
+    //const round = new Round(req.body);
+    //const error = round.validateSync();
+    //if (error) { //Schema validation error occurred
+   //   return res.status(400).send("Round not modified. " + error.message);
+   // }
+   
+    const status = await User.updateOne(
+      {"accountData.id": req.params.userId, "accountData.rounds.id": req.params.roundId },
+      { $pull: {rounds : {_id: req.params.roundId} } });
+    if (status.modifiedCount != 1) {
+      return res.status(400).send("Round not deleted. Error.");
+    } else {
+      return res.status(201).send("Round successfully deleted.");
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(400).send("Round not deleted. " +
+      "Unexpected error occurred: " + err);
+  } 
+});
 export default roundRoute;
