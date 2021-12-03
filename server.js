@@ -10,6 +10,7 @@ import passportConfig from './passport/config.js';
 import authRoute from './routes/authRoutes.js';
 import userRoute from './routes/userRoutes.js';
 import roundRoute from './routes/roundRoutes.js';
+import courseRoute from './routes/courseRoutes.js';
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
 const app = express(); //Instantiate express app
 const buildPath = (PORT === process.env.PORT) ?
@@ -44,5 +45,6 @@ app
   .use(authRoute)
   .use(userRoute)
   .use(roundRoute)
+  .use(courseRoute)
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
   
