@@ -31,13 +31,14 @@ courseRoute.post('/courses/', async (req, res, next) => {
       if (error) { //Schema validation error occurred
         return res.status(400).send("Course not added to database. " + error.message);
       }
-      const status = await Course.insertMany(
-        req.body);
-      if (status.modifiedCount != 1) {
-        return res.status(400).send("Course not added to database.");
-      } else {
-        return res.status(201).send("Course successfully added to database.");
+      Course.insertMany(req.body, function(err,result){
+        if(err){
+            res.status(400).send({ message: 'Could not save the course', meta: err });
+        } 
+        else{
+            res.status(200).send({ message: 'Successfully saved the course', data: result });
       }
+      });
     } catch (err) {
       console.log(err);
       return res.status(400).send("Course not added to database. " +
