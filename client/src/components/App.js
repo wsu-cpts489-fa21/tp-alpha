@@ -3,7 +3,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faWindowClose, faEdit, faCalendar, 
         faSpinner, faSignInAlt, faBars, faTimes, faSearch,
         faSort, faTrash, faEye, faUserPlus } from '@fortawesome/free-solid-svg-icons';
-import { faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGoogle} from '@fortawesome/free-brands-svg-icons';
 import NavBar from './NavBar.js';
 import ModeTabs from './ModeTabs.js';
 import LoginPage from './LoginPage.js';
@@ -25,6 +25,7 @@ class App extends React.Component {
     this.state = {mode: AppMode.LOGIN,
                   menuOpen: false,
                   modalOpen: false,
+                  editId: -1,
                   userData: {
                     accountData: {},
                     identityData: {},
@@ -172,6 +173,7 @@ class App extends React.Component {
                            speedgolfData: this.state.userData.speedgolfData,
                            rounds: newRounds};
       this.setState({userData: newUserData});
+   
       return("New round logged.");
     } else { 
       const resText = await res.text();
@@ -179,44 +181,110 @@ class App extends React.Component {
     }
   }
 
-  updateRound = (newRoundData) => {
+  passEditId = (val) => {
+      this.setState({editId: val});
+  }
+
+  updateRound = async(newRoundData) => {
     const newRounds = [...this.state.userData.rounds];
-    let r;
+/*     let r;
     for (r = 0; r < newRounds.length; ++r) {
         if (newRounds[r].roundNum === newRoundData.roundNum) {
             break;
         }
-    }
-    newRounds[r] = newRoundData;
-    const newUserData = {
-      accountData: this.state.userData.accountData,
-      identityData: this.state.userData.identityData,
-      speedgolfProfileData: this.state.userData.speedgolfProfileData,
-      rounds: newRounds, 
-      roundCount: this.state.userData.roundCount
-    }
-    localStorage.setItem(newUserData.accountData.email,JSON.stringify(newUserData));
-    this.setState({userData: newUserData}); 
-  }
+    } */
+ /*    fetch("/users/BrianSchimert@github")
+    .then(
+      function(response){
+      response.json()
+      .then(function(data) {
+        var json = JSON.parse(data);
+        roundId = json.rounds[r].id;
+        round = json.rounds[r];
+      });
+    }); */
+    //const newRounds = [...this.state.userData.rounds];
+    newRounds[this.state.editId] = newRoundData;
+    const response = await fetch("/users/" + this.state.userData.accountData.id);
+    const json = await response.json();
+    const data = JSON.parse(json);
+    var roundId = data.rounds[this.state.editId].id;
+    var round =data.rounds[this.state.editId];
+    //alert(roundId);
+    let res = await fetch(("/rounds/" + this.state.userData.accountData.id + "/" + roundId), {
+      method: 'PUT',
+      headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                    },
+              method: 'PUT',
+              body: JSON.stringify(newRounds)
+    }); 
+      if (res.status == 201) { 
+    
+      const newUserData = {
+        accountData: this.state.userData.accountData,
+        identityData: this.state.userData.identityData,
+        speedgolfProfileData: this.state.userData.speedgolfProfileData,
+        rounds: newRounds, 
+        roundCount: this.state.userData.roundCount
+      }
+      this.setState({userData: newUserData});
 
-  deleteRound = (id) => {
+      return(" round edited.");
+      } else { 
+      const resText = await res.text();
+      return(" Round could not be edited. " + resText);
+      }
+    }
+
+  deleteRound = async (id) => {
     const newRounds = [...this.state.userData.rounds];
     let r;
-    for (r = 0; r < newRounds.length; ++r) {
+/*     for (r = 0; r < newRounds.length; ++r) {
         if (newRounds[r].roundNum === this.state.deleteId) {
             break;
         }
     }
-    delete newRounds[r];
-    const newUserData = {
-      accountData: this.state.userData.accountData,
-      identityData: this.state.userData.identityData,
-      speedgolfProfileData: this.state.userData.speedgolfProfileData,
-      rounds: newRounds, 
-      roundCount: this.state.userData.roundCount
-    }
-    localStorage.setItem(newUserData.accountData.email,JSON.stringify(newUserData));
-    this.setState({userData: newUserData});
+    //delete newRounds[r];
+    
+    alert(this.state.deleteId);
+    
+    alert(newRounds[r].roundNum);
+    alert(r); */
+    //alert(id);
+    newRounds.splice(id, 1);
+  
+    const response = await fetch("/users/" + this.state.userData.accountData.id);
+    const json = await response.json();
+    const data = JSON.parse(json);
+    var roundId = data.rounds[id].id;
+    var round =data.rounds[id];
+    //alert(roundId);
+    let res = await fetch(("/rounds/" + this.state.userData.accountData.id + "/" + roundId), {
+      method: 'DELETE',
+      headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                    },
+              method: 'DELETE',
+    }); 
+      if (res.status == 201) { 
+        
+        const newUserData = {
+          accountData: this.state.userData.accountData,
+          identityData: this.state.userData.identityData,
+          speedgolfProfileData: this.state.userData.speedgolfProfileData,
+          rounds: newRounds, 
+          roundCount: this.state.userData.roundCount
+        }
+        this.setState({userData: newUserData});
+      alert("round deleted");
+      return(" round deleted.");
+      } else { 
+      const resText = await res.text();
+      return(" Round could not be deleted. " + resText);
+      }
   }
 
   render() {
@@ -249,6 +317,7 @@ class App extends React.Component {
                       userId={this.state.userId}/>,
           RoundsMode:
             <RoundsPage rounds={this.state.userData.rounds}
+                        passEditId = {this.passEditId}
                         addRound={this.addRound}
                         updateRound={this.updateRound}
                         deleteRound={this.deleteRound}

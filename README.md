@@ -1,4 +1,4 @@
-# CptS 489 Team Project: *Team Name*
+# CptS 489 Team Project: *tp-alpha*
 This repository implements SpeedScore, a web app that enables users to log, analyze, share, and discuss their speedgolf rounds and experiences. SpeedScore is built using MongoDB, Express.js, React.js, and Node.js.
 
 ## Link to Deployed App
@@ -21,7 +21,7 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
       <th colspan="2"></th><th colspan="6">Story Point Counts</th><th colspan="2"></th>
     </tr> 
     <tr>
-      <th>Issue</th><th>Linked PR</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>% Complete</th><th>Notes</th>
+      <th>Issue</th><th>Linked PR</th><th>Total</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th><th>% Complete</th><th>Notes</th>
     </tr>
   </thead> 
   <tbody>
@@ -57,15 +57,14 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   </tbody>
 </table>
 
-#### Context Statements
-| Team Member | Context Statement |
+#### Reflection Statements
+| Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| Setup MongoDB, add Google OAuth |
-|TM2| Deploy app to Heroku,  complete milstone reports|
-|TM3| Delete speedscore rounds, update speedscore rounds |
-|TM4| testing |
-|TM5| testing |
-
+|Hung| Setup MongoDB, add Google OAuth | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Brian| Deploy app to Heroku,  complete milestone reports| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Desmond| Delete speedscore rounds, update speedscore rounds | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Josh| testing | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Turner| testing | <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 ### Testing
 
 |Issue | Test File | Feature Tested | Results Summary | 
@@ -75,14 +74,14 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   
 ### Communication
  
-#### Slack Messages
+#### Discord Messages
 <table> 
   <thead>
     <tr>
       <th></th><th colspan="6">Post/Reply Counts</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Total</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th>
     </tr>
   </thead> 
   <tbody>
@@ -104,49 +103,56 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
       <th colspan="2"></th><th colspan="5">In attendance?</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Duration (min)</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>17</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td>
+      <td>11/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
     </tr>
      <tr>
-      <td>11/12/21</td><td>31</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td>
+      <td>11/12/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>48</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td>
+     <tr>
+      <td>11/17/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
+    </tr>
+     <tr>
+      <td>11/19/21</td><td>120</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>340</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>0</b></td>
     </tr>
   </tbody>
 </table>
   
 
-#### Context Statements
-| Team Member | Context Statement |
+#### Reflection Statements
+| Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM2| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM3| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM4| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM5| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
+|Hung| We were pretty successful in communicating with each other. Everyone replied in a timely manner. We decided to switch to Discord to communicate as it is a more effective system.  |
+|Brian| We use Discord to message each other and have teeam meetings because all of the team members are more comfortable with this platform.  Questions through messaging were answered quickly and our meetings were effective.  We plan to have more planned out meetings during the next milestone. |
+|Desmond| Communication seems to be good overall in this team. I was able to quickly get access to our database and heroku upon request. We have had a little trouble scheduling meeting times, but that is mostly due to situations out of our control thus far. |<*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Josh| Post Milestone 0, I am happy with the team communication is consistant and teammates are helpful for the most part. Looking back at my own work, I could have commited my work more as well as give status updates when I have nothing to commit. Now that my version of our web app can run on my MacOS system I think most things will be smooth from here on out. |
+|Turner| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
-
-[Link to Recording](https://wsu.zoom.us/recording)
+See RetrospectiveMeetings folder in branch "main".
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - Linking our work together (Heroku, MongoDB)
+  - Fast responses for questions in Discord
+  - Use of Kanban board to track issues
+ 
   
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+  - More frequent communication
+  - Finding good times for all 5 members to meet
+  - Trying to start work earlier and commit more frequently
   
 #### Changes we plan to implement in next milestone period
-  - Item 1
-  - Item 2
-  - Item x
+  - Daily status updates (even if no changes)
+  - Establish set meeting times that work for everybody throughout the milestone period
+
+
 
 ## Milestone 1 (Due 12/3)
 
@@ -173,14 +179,14 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   </tbody>
 </table>
 
-#### Context Statements
-| Team Member | Context Statement |
+#### Reflection Statements
+| Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM2| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM3| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM4| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM5| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
+|TM1| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM2| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM3| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM4| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM5| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 
 ### Testing
 
@@ -220,17 +226,23 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
       <th colspan="2"></th><th colspan="5">In attendance?</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Duration (min)</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>17</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td>
+      <td>11/10/21</td><td>60</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
     </tr>
      <tr>
-      <td>11/12/21</td><td>31</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td>
+      <td>11/12/21</td><td>60</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>48</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td>
+     <tr>
+      <td>11/17/21</td><td>60</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
+    </tr>
+     <tr>
+      <td>11/19/21</td><td>120</td><td>&check;</td><td>&check;</td>&check;<td></td><td>&check;</td><td></td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>340</b></td><td><b>4</b></td><td><b>2</b></td><td><b>4</b></td><td><b>4</b></td><td><b>0</b></td>
     </tr>
   </tbody>
 </table>
@@ -257,33 +269,26 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   </tbody>
 </table>
 
-#### Context Statements
-| Team Member | Context Statement |
+#### Reflection Statements
+| Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM2| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM3| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM4| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM5| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
+|TM1| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM2| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM3| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM4| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM5| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
 
 [Link to Recording](https://wsu.zoom.us/recording)
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
-  
+ 
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+
   
 #### Changes we plan to implement in next milestone period
-  - Item 1
-  - Item 2
-  - Item x
+
   
 ## Milestone 2 (Due 12/10)
 
@@ -310,14 +315,14 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   </tbody>
 </table>
 
-#### Context Statements
-| Team Member | Context Statement |
+#### Reflection Statements
+| Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM2| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM3| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM4| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
-|TM5| <*Optional but encouraged*: Brief statement explaining your contribution to this milestone> |
+|TM1| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM2| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM3| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM4| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM5| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 
 ### Testing
 
@@ -394,14 +399,14 @@ You can access our team's deployed app at [this Heroku site](https://tp-alpha.he
   </tbody>
 </table>
 
-#### Context Statements
-| Team Member | Context Statement |
+#### Reflection Statements
+| Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM2| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM3| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM4| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
-|TM5| <*Optional but encouraged*: Brief statement explaining your communication to this milestone> |
+|TM1| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM2| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM3| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM4| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|TM5| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
 

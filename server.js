@@ -10,15 +10,17 @@ import passportConfig from './passport/config.js';
 import authRoute from './routes/authRoutes.js';
 import userRoute from './routes/userRoutes.js';
 import roundRoute from './routes/roundRoutes.js';
+import courseRoute from './routes/courseRoutes.js';
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
 const app = express(); //Instantiate express app
 const buildPath = (PORT === process.env.PORT) ?
   new URL('client/build/', import.meta.url).pathname :
   (new URL('client/build/', import.meta.url).pathname).substring(1);
 import mongoose from 'mongoose';
-//const connectStr = 'mongodb://localhost:27017/appdb'; //Local
+// const connectStr = 'mongodb://localhost:27017/appdb'; //Local
 const connectStr = 'mongodb+srv://' + process.env.MONGODB_USER + ':' + 
-                  process.env.MONGODB_PW + process.env.MONGODB_CSTRING; //Remote DB
+                    process.env.MONGODB_PW + 
+                    process.env.MONGODB_CSTRING; //Remote DB
 //////////////////////////////////////////////////////////////////////////
 //MONGOOSE SET-UP
 //The following code sets up the app to connect to a MongoDB database
@@ -43,5 +45,6 @@ app
   .use(authRoute)
   .use(userRoute)
   .use(roundRoute)
+  .use(courseRoute)
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
   
