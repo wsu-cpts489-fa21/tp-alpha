@@ -1,9 +1,9 @@
 import { Selector } from 'testcafe';
 
-fixture `editAccountProfile`
+fixture `deleteRoundTest`
     .page `http://localhost:8081`;
 
-test('editAccountProfile', async t => {
+test('deleteRound', async t => {
     await t
         .click()
 });
