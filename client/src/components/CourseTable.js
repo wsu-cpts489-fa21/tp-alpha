@@ -11,7 +11,7 @@ class CourseTable extends React.Component {
     searchCourseTable(searchVal) {
         searchVal = searchVal.toUpperCase(); //case insensitive
         let tr = table.getElementsByTagName("tr");
-        let td, rowText, i, j;
+        let td, rowText, i;
         let numVisibleRows = 0;
         for (i = 1; i < tr.length; i++) {  //Loop through all table rows
           td = tr[i].getElementsByTagName("td");
