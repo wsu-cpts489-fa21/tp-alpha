@@ -40,6 +40,15 @@ class CoursesPage extends React.Component {
                         setMode={this.setMode}
                         toggleModalOpen={this.props.toggleModalOpen} />
                 );
+            case CourseMode.EditCourse:
+                return (
+                    <CourseForm mode={this.state.mode}
+                    editId = {this.state.editId}
+                    courseData={this.props.rounds[this.state.editId]}
+                    saveCourse={this.props.addCourse}
+                    setMode={this.setMode}
+                    toggleModalOpen={this.props.toggleModalOpen} />
+                );
         }
     }
 }

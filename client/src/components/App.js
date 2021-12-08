@@ -193,23 +193,7 @@ class App extends React.Component {
 
   updateRound = async(newRoundData) => {
     const newRounds = [...this.state.userData.rounds];
-/*     let r;
-    for (r = 0; r < newRounds.length; ++r) {
-        if (newRounds[r].roundNum === newRoundData.roundNum) {
-            break;
-        }
-    } */
- /*    fetch("/users/BrianSchimert@github")
-    .then(
-      function(response){
-      response.json()
-      .then(function(data) {
-        var json = JSON.parse(data);
-        roundId = json.rounds[r].id;
-        round = json.rounds[r];
-      });
-    }); */
-    //const newRounds = [...this.state.userData.rounds];
+
     newRounds[this.state.editId] = newRoundData;
     const response = await fetch("/users/" + this.state.userData.accountData.id);
     const json = await response.json();
@@ -294,6 +278,16 @@ class App extends React.Component {
   }
 
   //Course management methods
+updateCourse = async(newCourseData) => {
+
+
+}
+
+deleteCourse = async(id) => {
+
+
+}
+  
   getCourseData = async() => {
     const res = await fetch("/courses/", {method: 'GET'});
     const json = await res.json();
@@ -306,7 +300,7 @@ class App extends React.Component {
     }
   }
 
-  postCourseData = async(newCourse) => {
+  addCourse = async(newCourse) => {
     let res = await fetch("/courses/", {
       method: 'POST',
       headers: {
@@ -320,7 +314,7 @@ class App extends React.Component {
       const newCourses = [...this.state.courses];
       newCourses.push(newCourse);
       this.setState({courses: newCourses});
-   
+      alert("added course");
       return("New course added.");
     } else { 
       const resText = await res.text();
@@ -368,6 +362,9 @@ class App extends React.Component {
                         userId={this.state.userId}/>,
           CoursesMode:
             <CoursesPage courses={this.state.courses}
+                        addCourse={this.addCourse}
+                        updateCourse={this.updateCourse}
+                        deleteCourse={this.deleteCourse}
                         modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
