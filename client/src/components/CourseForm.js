@@ -17,6 +17,8 @@ class CourseForm extends React.Component {
                 phoneNum: "",
                 geoLocation: "",
                 picture: "",
+                btnIcon: "calendar",
+                btnLabel: "Add Course"
             };
         } else {
             this.state = this.props.courseData;
@@ -198,79 +200,7 @@ class CourseForm extends React.Component {
                             A picture of the course (optional)
                         </div>
                     </div>
-                    {/* <div className="mb-3 centered">
-                        <label htmlFor="roundCourse" className="form-label">Course:
-                            <input id="roundCourse" name="course"
-                                className="form-control centered" type="text"
-                                aria-describedby="roundCourseDescr"
-                                size="50" maxLength="50" value={this.state.course}
-                                onChange={this.handleChange} required />
-                        </label>
-                        <div id="roundCourseDescr" className="form-text">
-                            Enter a course name of at most 50 characters
-                        </div>
-                    </div>
-                    <div className="mb-3 centered">
-                        <label htmlFor="roundType">Type:
-                            <select id="roundType" name="type" id="roundType" className="form-control centered"
-                                value={this.state.type} onChange={this.handleChange}>
-                                <option value="practice">Practice</option>
-                                <option value="tournament">Tournament</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div className="mb-3 centered">
-                        <label htmlFor="roundHoles">Holes:
-                            <select id="roundHoles" name="holes"
-                                className="form-control centered" value={this.state.holes} onChange={this.handleChange}>
-                                <option value="9">9</option>
-                                <option value="18">18</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div className="mb-3 centered">
-                        <label htmlFor="roundStrokes">Strokes:
-                            <input id="roundStrokes" name="strokes" className="form-control centered" type="number"
-                                min="9" max="200" value={this.state.strokes} aria-describedby="roundStrokesDescr"
-                                onChange={this.handleChange} required />
-                        </label>
-                        <div id="roundStrokesDescr" className="form-text">
-                            Enter a strokes value between 9 and 200
-                        </div>
-                    </div>
-                    <div className="mb-3 centered">
-                        <label htmlFor="roundMinutes">Time:
-                            <input id="roundMinutes" name="minutes" type="number" size="3"
-                                aria-describedby="roundTimeDescr"
-                                min="10" max="400" value={this.state.minutes} style={{ textAlign: "right" }}
-                                onChange={this.handleChange} required /> :
-                            <input id="roundSeconds" name="seconds" type="number" size="2"
-                                aria-describedby="roundTimeDescr"
-                                min="0" max="60" value={this.state.seconds} onChange={this.handleChange}
-                                required />
-                        </label>
-                        <div id="roundTimeDescr" className="form-text">
-                            Enter a minutes value between 10 and 400, and a seconds value between 0 and 59
-                        </div>
-                    </div>
-                    <div className="mb-3 centered">
-                        <label htmlFor="roundSGS">Speedgolf Score:
-                            <input name="SGS" className="form-control centered" type="text"
-                                size="6" value={this.state.SGS} readOnly={true} />
-                        </label>
-                    </div>
-                    <div className="mb-3 centered">
-                        <label htmlFor="roundNotes">Notes:
-                            <textarea name="notes" id="roundNotes" className="form-control centered"
-                                aria-describedby="roundNotesDescr"
-                                rows="6" cols="75" maxLength="500"
-                                value={this.state.notes} onChange={this.handleChange}>
-                            </textarea>
-                        </label>
-                        <div id="roundNotesDescr" className="form-text">
-                            Enter optional round notes of up to 500 characters
-                        </div>
-                    </div> */}
+                   
                     <div className="mode-page-btn-container">
                         <button type="submit" className="mode-page-btn action-dialog action-button">
                             <FontAwesomeIcon icon={this.state.btnIcon} className={this.state.btnIcon == "spinner" ? "fa-spin" : ""} />
