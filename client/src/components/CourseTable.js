@@ -16,7 +16,7 @@ class CourseTable extends React.Component {
         for (i = 1; i < tr.length; i++) {  //Loop through all table rows
           td = tr[i].getElementsByTagName("td");
           rowText = "";
-            rowText += td[0].textContent; //only consider Course Name olumn
+            rowText += td[0].textContent; //only consider Course Name column
           if (rowText.toUpperCase().indexOf(searchVal) > -1) {
             tr[i].style.display = ""; //show row
             numVisibleRows++;

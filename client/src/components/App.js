@@ -26,6 +26,7 @@ class App extends React.Component {
                   menuOpen: false,
                   modalOpen: false,
                   editId: -1,
+                  courses: [],
                   userData: {
                     accountData: {},
                     identityData: {},
