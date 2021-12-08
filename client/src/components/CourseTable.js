@@ -4,11 +4,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class CourseTable extends React.Component {
     renderTable = () =>{
         const table = [];
+        for(let r = 0; r < this.props.courses.length; ++r){
+            table.push(
+                <tr key={r}>
+                    <td>{this.props.courses[r].name}</td>
+                    <td>{this.props.courses[r].location}</td>
+                </tr>
+
+            );
+        }
 
         return table;
     }
 
-    searchCourseTable(searchVal) {
+    /* searchCourseTable(searchVal) {
         searchVal = searchVal.toUpperCase(); //case insensitive
         let tr = table.getElementsByTagName("tr");
         let td, rowText, i;
@@ -29,7 +38,7 @@ class CourseTable extends React.Component {
         } else {
           courseTableCaption.textContent = "Table displaying " + numVisibleRows + " speedgolf courses";
         }
-      }
+      } */
 
     render() {
         return (
@@ -61,10 +70,11 @@ class CourseTable extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    
-                    <tr>
-                        <td colSpan="2" scope="rowgroup"><i>No courses listed</i></td>
-                    </tr>
+                    {this.props.courses == null || this.props.courses.length === 0 ?
+                        <tr>
+                            <td colSpan="2" scope="rowgroup"><i>No courses listed</i></td>
+                        </tr> : this.renderTable()
+                    }
                 </tbody>
             </table>
             </div>

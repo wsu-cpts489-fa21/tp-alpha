@@ -17,7 +17,10 @@ class CoursesPage extends React.Component {
         switch(this.state.mode){
         case CourseMode.CourseTable:
             return (
-                <CourseTable></CourseTable>
+                <CourseTable courses={this.props.courses}
+                             setMode={this.setMode}
+                             toggleModalOpen={this.props.toggleModalOpen}
+                             menuOpen={this.props.menuOpen}/>
             );
         }
     }   

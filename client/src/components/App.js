@@ -26,7 +26,11 @@ class App extends React.Component {
                   menuOpen: false,
                   modalOpen: false,
                   editId: -1,
-                  courses: [],
+                  courses: [{name: "test",
+                            addresss: "1234 test",
+                            phoneNumber: "1234",
+                            location: "home",
+                            picture: "png"}],
                   userData: {
                     accountData: {},
                     identityData: {},
@@ -35,6 +39,7 @@ class App extends React.Component {
                     roundCount: 0},
                   authenticated: false                  
                   };
+    this.getCourseData();
   }
 
   componentDidMount() {
@@ -291,8 +296,14 @@ class App extends React.Component {
   //Course management methods
   getCourseData = async() => {
     const res = await fetch("/courses/", {method: 'GET'});
-    var c = JSON.parse(res)
-    this.setState({courses: c})
+    const json = await res.json();
+    if(res.status == 200){
+      var c = JSON.parse(json);
+      this.setState({courses: c});
+    }
+    else{
+      return ("Could not get courses");
+    }
   }
 
   postCourseData = async(newCourse) => {
@@ -356,7 +367,8 @@ class App extends React.Component {
                         menuOpen={this.state.menuOpen}
                         userId={this.state.userId}/>,
           CoursesMode:
-            <CoursesPage modalOpen={this.state.modalOpen}
+            <CoursesPage courses={this.state.courses}
+                        modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
                         userId={this.state.userId}/>,
