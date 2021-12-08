@@ -9,7 +9,7 @@ const courseRoute = express.Router();
 
 
 //CREATE course route: Adds a new course (POST)
-courseRoute.post('/courses', async (req, res, next) => {
+courseRoute.post('/courses/', async (req, res, next) => {
   console.log("in /courses (POST) route with params = " +
     JSON.stringify(req.params) + " and body = " +
     JSON.stringify(req.body));
@@ -44,7 +44,7 @@ courseRoute.post('/courses', async (req, res, next) => {
 });
 
 //READ courses route: Returns all courses
-courseRoute.get('/courses', async (req, res) => {
+courseRoute.get('/courses/', async (req, res) => {
   console.log("in /courses route (GET)");
   try {
     let courses = await Course.find({});

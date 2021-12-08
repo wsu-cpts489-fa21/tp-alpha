@@ -47,7 +47,7 @@ class CourseTable extends React.Component {
             <h1 className="mode-page-header">Course Listings</h1>
             <table id="courseTable" className="table table-hover caption-top">
                 <caption id="courseTableCaption" aria-live="polite">
-                    {"Displaying " + 0 + " results"}
+                    {"Displaying " + this.props.courses.length + " results"}
                 </caption>
                 <thead className="table-light">
                     <tr>

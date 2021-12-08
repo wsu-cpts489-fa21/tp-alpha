@@ -19,7 +19,12 @@ class CoursesPage extends React.Component {
             case CourseMode.CourseTable:
                 return (
                     <>
-                        <CourseTable></CourseTable>
+                        <CourseTable
+                        courses={this.props.courses}
+                        modalOpen={this.state.modalOpen}
+                        toggleModalOpen={this.toggleModalOpen} 
+                        menuOpen={this.state.menuOpen}
+                        />
                         <CourseFloatingButton
                             label={"Add Course"}
                             menuOpen={this.props.menuOpen}
