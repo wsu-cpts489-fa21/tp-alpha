@@ -192,6 +192,10 @@ class App extends React.Component {
       this.setState({editId: val});
   }
 
+  passCourseEditId = (val) => {
+    this.setState({courseEditId: val});
+}
+
   updateRound = async(newRoundData) => {
     const newRounds = [...this.state.userData.rounds];
 
@@ -232,18 +236,6 @@ class App extends React.Component {
   deleteRound = async (id) => {
     const newRounds = [...this.state.userData.rounds];
     let r;
-/*     for (r = 0; r < newRounds.length; ++r) {
-        if (newRounds[r].roundNum === this.state.deleteId) {
-            break;
-        }
-    }
-    //delete newRounds[r];
-    
-    alert(this.state.deleteId);
-    
-    alert(newRounds[r].roundNum);
-    alert(r); */
-    //alert(id);
     newRounds.splice(id, 1);
   
     const response = await fetch("/users/" + this.state.userData.accountData.id);
@@ -279,15 +271,16 @@ class App extends React.Component {
   }
 
   //Course management methods
-updateCourse = async(newCourseData) => {
+editCourse = async(newCourseData) => {
   const newCourses = [...this.state.courses];
 
-  newCourses[this.state.editId] = newCourseData;
-  //alert(roundId);
+  newCourses[this.state.courseEditId] = newCourseData;
+ 
   const response = await fetch("/courses/");
     const json = await response.json();
     const data = JSON.parse(json);
-    var courseId = data[this.state.coursEditId].id;
+    var courseId = data[this.state.courseEditId].id;
+    alert(courseId);
   let res = await fetch(("/courses/" + courseId), {
     method: 'PUT',
     headers: {
@@ -309,7 +302,32 @@ updateCourse = async(newCourseData) => {
 }
 
 deleteCourse = async(id) => {
+  const newCourses = [...this.state.courses];
+  let r;
+  newCourses.splice(id, 1);
 
+  const response = await fetch("/courses/");
+  const json = await response.json();
+  const data = JSON.parse(json);
+  var courseId = data[id].id;
+  //alert(roundId);
+  let res = await fetch(("/courses/" + courseId), {
+    method: 'DELETE',
+    headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+                  },
+            method: 'DELETE',
+  }); 
+    if (res.status == 201) { 
+  
+      this.setState({courses: newCourses});
+    alert("Course deleted");
+    return(" Course deleted.");
+    } else { 
+    const resText = await res.text();
+    return(" Course could not be deleted. " + resText);
+    }
 
 }
   
@@ -387,8 +405,9 @@ deleteCourse = async(id) => {
                         userId={this.state.userId}/>,
           CoursesMode:
             <CoursesPage courses={this.state.courses}
+                        passCourseEditId={this.passCourseEditId}
                         addCourse={this.addCourse}
-                        updateCourse={this.updateCourse}
+                        editCourse={this.editCourse}
                         deleteCourse={this.deleteCourse}
                         modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 

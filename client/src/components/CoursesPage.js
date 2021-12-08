@@ -7,11 +7,27 @@ import CourseForm from './CourseForm';
 class CoursesPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { mode: CourseMode.CourseTable };
+        this.state = { mode: CourseMode.CourseTable,
+                        courseEditId: -1,
+                        courseDeleteId: -1 };
     }
 
     setMode = (newMode) => {
         this.setState({ mode: newMode });
+    }
+
+    initiateEditCourse = (val) => {
+        this.setState({courseEditId: val,
+                       mode: CourseMode.EditCourse}, 
+                       this.props.toggleModalOpen);
+        this.props.passCourseEditId(val);
+    }
+    
+    initiateDeleteCourse = (val) => {
+        this.props.deleteCourse(val);
+        this.setState({courseDeleteId: val})
+        //() => alert("Confirm delete!"));
+        
     }
 
     render() {
@@ -24,6 +40,8 @@ class CoursesPage extends React.Component {
                         modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
+                        initiateDeleteCourse={this.initiateDeleteCourse}
+                        initiateEditCourse={this.initiateEditCourse}
                         />
                         <CourseFloatingButton
                             label={"Add Course"}
@@ -43,9 +61,9 @@ class CoursesPage extends React.Component {
             case CourseMode.EditCourse:
                 return (
                     <CourseForm mode={this.state.mode}
-                    editId = {this.state.editId}
-                    courseData={this.props.rounds[this.state.editId]}
-                    saveCourse={this.props.addCourse}
+                    editId = {this.state.courseEditId}
+                    courseData={this.props.courses[this.state.courseEditId]}
+                    saveCourse={this.props.editCourse}
                     setMode={this.setMode}
                     toggleModalOpen={this.props.toggleModalOpen} />
                 );
