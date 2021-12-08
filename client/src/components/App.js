@@ -290,11 +290,31 @@ class App extends React.Component {
 
   //Course management methods
   getCourseData = async() => {
-    
+    const res = await fetch("/courses/", {method: 'GET'});
+    var c = JSON.parse(res)
+    this.setState({courses: c})
   }
 
-  postCourseData = async() => {
-
+  postCourseData = async(newCourse) => {
+    let res = await fetch("/courses/", {
+      method: 'POST',
+      headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                    },
+              method: 'POST',
+              body: JSON.stringify(newCourse)
+    }); 
+    if (res.status == 201) { 
+      const newCourses = [...this.state.courses];
+      newCourses.push(newCourse);
+      this.setState({courses: newCourses});
+   
+      return("New course added.");
+    } else { 
+      const resText = await res.text();
+      return("New course could not be added. " + resText);
+    }
   }
 
   render() {
