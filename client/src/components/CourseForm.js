@@ -181,6 +181,23 @@ class CourseForm extends React.Component {
                             Enter the course geolocation (optional)
                         </div>
                     </div>
+                    <div className="mb-3 centered">
+                        <label htmlFor="coursePic" className="form-label">
+                            Course Picture
+                            <img id="coursePicImage"
+                                className="fm-profile-pic" height="46" width="auto" />
+                            <input id="coursePic"
+                                className="form-control centered"
+                                name="coursePic"
+                                type="file"
+                                accept=".png, .gif, .jpg"
+                                aria-describedby="coursePicDescr"
+                            />
+                        </label>
+                        <div id="coursePicDescr" className="form-text">
+                            A picture of the course (optional)
+                        </div>
+                    </div>
                     {/* <div className="mb-3 centered">
                         <label htmlFor="roundCourse" className="form-label">Course:
                             <input id="roundCourse" name="course"
