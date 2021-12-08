@@ -14,7 +14,7 @@ class CourseForm extends React.Component {
             this.state = {
                 name: "",
                 address: "",
-                phoneNum: "",
+                phoneNumber: "",
                 location: "",
                 picture: "",
                 btnIcon: "calendar",
@@ -37,11 +37,12 @@ class CourseForm extends React.Component {
         const courseName = courseInfo[0]
         const courseAddress = results[0].formatted_address
         const latLng = await getLatLng(results[0])
+        const location = latLng.lat + ", " + latLng.lng
         this.setState({
             // ...this.state,
             name: courseName,
             address: courseAddress,
-            location: latLng
+            location: location
         })
         console.log(this.state.name)
         console.log(results)
@@ -84,6 +85,7 @@ class CourseForm extends React.Component {
         const newCourse = { ...this.state };
         delete newCourse.btnIcon;
         delete newCourse.btnLabel;
+        delete newCourse.value;
         const res = await this.props.saveCourse(newCourse);
         this.props.toggleModalOpen();
         this.props.setMode(CourseMode.CourseTable);
