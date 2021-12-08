@@ -182,19 +182,19 @@ class CourseForm extends React.Component {
                         </div>
                     </div>
                     <div className="mb-3 centered">
-                        <label htmlFor="profilePic" className="form-label">
+                        <label htmlFor="coursePic" className="form-label">
                             Course Picture
-                            <img id="acctProfilePicImage"
+                            <img id="coursePicImage"
                                 className="fm-profile-pic" height="46" width="auto" />
-                            <input id="profilePic"
+                            <input id="coursePic"
                                 className="form-control centered"
-                                name="profilePic"
+                                name="coursePic"
                                 type="file"
                                 accept=".png, .gif, .jpg"
-                                aria-describedby="profilePicDescr"
+                                aria-describedby="coursePicDescr"
                             />
                         </label>
-                        <div id="profilePicDescr" className="form-text">
+                        <div id="coursePicDescr" className="form-text">
                             A picture of the course (optional)
                         </div>
                     </div>
