@@ -26,6 +26,7 @@ class App extends React.Component {
                   menuOpen: false,
                   modalOpen: false,
                   editId: -1,
+                  courseEditId: -1,
                   courses: [{name: "test",
                             addresss: "1234 test",
                             phoneNumber: "1234",
@@ -279,7 +280,31 @@ class App extends React.Component {
 
   //Course management methods
 updateCourse = async(newCourseData) => {
+  const newCourses = [...this.state.courses];
 
+  newCourses[this.state.editId] = newCourseData;
+  //alert(roundId);
+  const response = await fetch("/courses/");
+    const json = await response.json();
+    const data = JSON.parse(json);
+    var courseId = data[this.state.coursEditId].id;
+  let res = await fetch(("/courses/" + courseId), {
+    method: 'PUT',
+    headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+                  },
+            method: 'PUT',
+            body: JSON.stringify(newCourseData)
+  }); 
+    if (res.status == 201) { 
+    this.setState({courses: newCourses});
+
+    return(" Course edited.");
+    } else { 
+    const resText = await res.text();
+    return(" Course could not be edited. " + resText);
+    }
 
 }
 
