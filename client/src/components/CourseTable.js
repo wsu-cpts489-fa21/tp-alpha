@@ -16,7 +16,7 @@ class CourseTable extends React.Component {
         for (i = 1; i < tr.length; i++) {  //Loop through all table rows
           td = tr[i].getElementsByTagName("td");
           rowText = "";
-            rowText += td[0].textContent; //only consider Course name Column
+            rowText += td[0].textContent; //only consider Course Name olumn
           if (rowText.toUpperCase().indexOf(searchVal) > -1) {
             tr[i].style.display = ""; //show row
             numVisibleRows++;
@@ -25,9 +25,9 @@ class CourseTable extends React.Component {
           }
         }
         if (numVisibleRows == 1) {
-          roundsTableCaption.textContent = "Table displaying 1 speedgolf course";
+          courseTableCaption.textContent = "Table displaying 1 speedgolf course";
         } else {
-          roundsTableCaption.textContent = "Table displaying " + numVisibleRows + " speedgolf courses";
+          courseTableCaption.textContent = "Table displaying " + numVisibleRows + " speedgolf courses";
         }
       }
 
