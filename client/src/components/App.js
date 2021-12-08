@@ -288,6 +288,15 @@ class App extends React.Component {
       }
   }
 
+  //Course management methods
+  getCourseData = async() => {
+    
+  }
+
+  postCourseData = async() => {
+
+  }
+
   render() {
     return (
       <>
