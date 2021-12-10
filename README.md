@@ -154,7 +154,7 @@ See RetrospectiveMeetings folder in branch "main".
 
 
 
-## Milestone 1 (Due 12/3)
+## Milestone 1 (Due 12/08)
 
 ### Progress
 #### Issues and Story Points
