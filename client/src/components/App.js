@@ -26,6 +26,12 @@ class App extends React.Component {
                   menuOpen: false,
                   modalOpen: false,
                   editId: -1,
+                  courseEditId: -1,
+                  courses: [{name: "test",
+                            addresss: "1234 test",
+                            phoneNumber: "1234",
+                            location: "home",
+                            picture: "png"}],
                   userData: {
                     accountData: {},
                     identityData: {},
@@ -34,6 +40,7 @@ class App extends React.Component {
                     roundCount: 0},
                   authenticated: false                  
                   };
+    this.getCourseData();
   }
 
   componentDidMount() {
@@ -185,25 +192,13 @@ class App extends React.Component {
       this.setState({editId: val});
   }
 
+  passCourseEditId = (val) => {
+    this.setState({courseEditId: val});
+}
+
   updateRound = async(newRoundData) => {
     const newRounds = [...this.state.userData.rounds];
-/*     let r;
-    for (r = 0; r < newRounds.length; ++r) {
-        if (newRounds[r].roundNum === newRoundData.roundNum) {
-            break;
-        }
-    } */
- /*    fetch("/users/BrianSchimert@github")
-    .then(
-      function(response){
-      response.json()
-      .then(function(data) {
-        var json = JSON.parse(data);
-        roundId = json.rounds[r].id;
-        round = json.rounds[r];
-      });
-    }); */
-    //const newRounds = [...this.state.userData.rounds];
+
     newRounds[this.state.editId] = newRoundData;
     const response = await fetch("/users/" + this.state.userData.accountData.id);
     const json = await response.json();
@@ -241,18 +236,6 @@ class App extends React.Component {
   deleteRound = async (id) => {
     const newRounds = [...this.state.userData.rounds];
     let r;
-/*     for (r = 0; r < newRounds.length; ++r) {
-        if (newRounds[r].roundNum === this.state.deleteId) {
-            break;
-        }
-    }
-    //delete newRounds[r];
-    
-    alert(this.state.deleteId);
-    
-    alert(newRounds[r].roundNum);
-    alert(r); */
-    //alert(id);
     newRounds.splice(id, 1);
   
     const response = await fetch("/users/" + this.state.userData.accountData.id);
@@ -285,6 +268,101 @@ class App extends React.Component {
       const resText = await res.text();
       return(" Round could not be deleted. " + resText);
       }
+  }
+
+  //Course management methods
+editCourse = async(newCourseData) => {
+  const newCourses = [...this.state.courses];
+
+  newCourses[this.state.courseEditId] = newCourseData;
+ 
+  const response = await fetch("/courses/");
+    const json = await response.json();
+    const data = JSON.parse(json);
+    var courseId = data[this.state.courseEditId].id;
+    alert(courseId);
+  let res = await fetch(("/courses/" + courseId), {
+    method: 'PUT',
+    headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+                  },
+            method: 'PUT',
+            body: JSON.stringify(newCourseData)
+  }); 
+    if (res.status == 201) { 
+    this.setState({courses: newCourses});
+
+    return(" Course edited.");
+    } else { 
+    const resText = await res.text();
+    return(" Course could not be edited. " + resText);
+    }
+
+}
+
+deleteCourse = async(id) => {
+  const newCourses = [...this.state.courses];
+  let r;
+  newCourses.splice(id, 1);
+
+  const response = await fetch("/courses/");
+  const json = await response.json();
+  const data = JSON.parse(json);
+  var courseId = data[id].id;
+  //alert(roundId);
+  let res = await fetch(("/courses/" + courseId), {
+    method: 'DELETE',
+    headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+                  },
+            method: 'DELETE',
+  }); 
+    if (res.status == 201) { 
+  
+      this.setState({courses: newCourses});
+    alert("Course deleted");
+    return(" Course deleted.");
+    } else { 
+    const resText = await res.text();
+    return(" Course could not be deleted. " + resText);
+    }
+
+}
+  
+  getCourseData = async() => {
+    const res = await fetch("/courses/", {method: 'GET'});
+    const json = await res.json();
+    if(res.status == 200){
+      var c = JSON.parse(json);
+      this.setState({courses: c});
+    }
+    else{
+      return ("Could not get courses");
+    }
+  }
+
+  addCourse = async(newCourse) => {
+    let res = await fetch("/courses/", {
+      method: 'POST',
+      headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                    },
+              method: 'POST',
+              body: JSON.stringify(newCourse)
+    }); 
+    if (res.status == 201) { 
+      const newCourses = [...this.state.courses];
+      newCourses.push(newCourse);
+      this.setState({courses: newCourses});
+      alert("added course");
+      return("New course added.");
+    } else { 
+      const resText = await res.text();
+      return("New course could not be added. " + resText);
+    }
   }
 
   render() {
@@ -326,7 +404,12 @@ class App extends React.Component {
                         menuOpen={this.state.menuOpen}
                         userId={this.state.userId}/>,
           CoursesMode:
-            <CoursesPage modalOpen={this.state.modalOpen}
+            <CoursesPage courses={this.state.courses}
+                        passCourseEditId={this.passCourseEditId}
+                        addCourse={this.addCourse}
+                        editCourse={this.editCourse}
+                        deleteCourse={this.deleteCourse}
+                        modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
                         userId={this.state.userId}/>,
