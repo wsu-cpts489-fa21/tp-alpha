@@ -169,10 +169,10 @@ See RetrospectiveMeetings folder in branch "main".
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>60</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>70</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue 46</a></td><td><a href="https://github.com/PR">PR #</a></td><td>13</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>70</td><td></td>
+     <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>13</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>40</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>26</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b></b></td><td><b></b></td><td><b>.7</b></td><td colspan="2"></td>
     </tr>
@@ -205,12 +205,33 @@ Testing gifs located in the repository's testGIFS file.
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>5</td><td>2</td><td>1</td><td>1</td><td>1</td>
+      <td>11/21/21</td><td>6</td><td>1</td><td>3</td><td>2</td><td>0</td>
     </tr>
     <tr>
-     <td>11/12/21</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td>
+     <td>11/29/21</td><td>9</td><td>5</td><td>2</td><td>1</td><td>1</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>9</b></td><td><b>3</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td>
+    <tr>
+     <td>12/01/21</td><td>6</td><td>1</td><td>4</td><td>0</td><td>1</td>
+    </tr>
+    <tr>
+     <td>12/02/21</td><td>8</td><td>2</td><td>2</td><td>4</td><td>0</td>
+    </tr>
+    <tr>
+     <td>12/03/21</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+     <td>12/06/21</td><td>3</td><td>1</td><td>1</td><td>0</td><td>1</td>
+    </tr>
+    <tr>
+     <td>12/07/21</td><td>18</td><td>2</td><td>7</td><td>1</td><td>8</td>
+    </tr>
+    <tr>
+     <td>12/08/21</td><td>14</td><td>3</td><td>5</td><td>1</td><td>5</td>
+    </tr>
+    <tr>
+     <td>12/10/21</td><td>6</td><td>4</td><td>1</td><td>1</td><td>0</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>72</b></td><td><b>21</b></td><td><b>25</b></td><td><b>10</b></td><td><b>16</b></td>
     </tr>
   </tbody>
 </table>
@@ -272,19 +293,15 @@ Testing gifs located in the repository's testGIFS file.
 
 ### Retrospective
 
-See RetrospectiveMeetings folder in branch "main".
+[Link to Recording](https://wsu.zoom.us/recording)
 
 #### What went well
-- Meeting Monday, Wednesday, and Friday at set times.
-- Working in pairs went well
-
-#### What we'd like to improve
-- Better outlining / planning 
-- Better source control flow / branch management
  
+ #### What we'd like to improve
+
+  
 #### Changes we plan to implement in next milestone period
-- Going through story tasks and figuring out exactly what needs to be done and the dependencies between tasks
-- Meet more frequently due to shorter timeline for tasks
+
   
 ## Milestone 2 (Due 12/10)
 
