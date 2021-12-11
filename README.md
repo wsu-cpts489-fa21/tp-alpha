@@ -172,7 +172,7 @@ See RetrospectiveMeetings folder in branch "main".
       <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>70</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue 46</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/65">PR 65</a></td><td>13</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>70</td><td></td>
+     <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue 46</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/65">PR 65</a></td><td>13</td><td>0</td><td>0</td><td>6.5</td><td>6.5</td><td>80</td><td> Added course table, search bar(not functional yet), filtering method, and get/post methods. Need to finish search bar implementation. Due to this issue having dependencies on parts of the implementation of other issues, coordination was more difficult and delays in the completion of dependencies slowed down developement. For that reason, I think the the story points for this issue should be increased to 18.</td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>26</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b></b></td><td><b></b></td><td><b>.7</b></td><td colspan="2"></td>
     </tr>
@@ -184,7 +184,7 @@ See RetrospectiveMeetings folder in branch "main".
 |-------------|-------------------|
 |Hung| For this milestone, I worked on creating the modal dialog form for adding a new course as well as a floating action button in the Courses tab so that the user can be directed to the add course form. I also worked on implementing the Google Places autocomplete API in order to speed up the process of adding a new course. |
 |Brian| My contributions to this milestone mainly consisted of setting up the server routes for Courses and getting them hooked up to the frontend.  There was a lot of collaboration between teammates in order for us to complete our tasks. |
-|Desmond| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Desmond| For this milestone, I worked with Josh on creating the table that displays user added speed golf courses. I wrote the get and post methods for getting the courses into local storage and well as adding them to the database respectively. I also designed the course filtering method.|
 |Josh| For this milestone, I worked with Desmond on creating table modal that would display and list all courses in the database, in addition to being able to search for specific courses. The specific part that I worked on creating the table and populating the database. Creating table was easy for the most part, however populating it was a bit more difficult due to not quite understanding how to retrieve that data. Luckily I was able to work through it with my team members and get it working. |
 
 
@@ -287,7 +287,7 @@ Testing gifs located in the repository's testGIFS file.
 |-------------|-------------------|
 |Hung| We did pretty well in terms of communication for this milestone. Everyone was able to attend our meeting times based on the schedule we agreed upon in the last TPM. When group members had questions, it was answered in a very timely manner. We all helped each other out whenever an issue would arise. |
 |Brian| I thought that communication during this milestone went really smoothly.  We implemented our plan from the previous TPM0 to meet every other day (Mon, Wed, Fri) in order to provide updates and figure out tasks for teammates.  We also responded to messages quickly in our Discord server and were able to help each other with any issues that arose. |
-|Desmond| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Desmond| Communication was generally good, however more time was needed doing concurrent programming. |
 |Josh| Communication wise this milestone I think we did pretty well, while there may have been some confusion on what each of us were doing we were quick to respond to each other in discord and sort out any issues that arise. |
 
 
