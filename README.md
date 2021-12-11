@@ -185,7 +185,7 @@ See RetrospectiveMeetings folder in branch "main".
 |Hung| For this milestone, I worked on creating the modal dialog form for adding a new course as well as a floating action button in the Courses tab so that the user can be directed to the add course form. I also worked on implementing the Google Places autocomplete API in order to speed up the process of adding a new course. |
 |Brian| My contributions to this milestone mainly consisted of setting up the server routes for Courses and getting them hooked up to the frontend.  There was a lot of collaboration between teammates in order for us to complete our tasks. |
 |Desmond| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Josh| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Josh| For this milestone, I worked with Desmond on creating table modal that would display and list all courses in the database, in addition to being able to search for specific courses. The specific part that I worked on creating the table and populating the database. Creating table was easy for the most part, however populating it was a bit more difficult due to not quite understanding how to retreive that data. Luckily I was able to work through it with my team members and get it working. |
 
 
 ### Testing
