@@ -293,15 +293,22 @@ Testing gifs located in the repository's testGIFS file.
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+See RetrospectiveMeetings folder in `main` branch.
 
 #### What went well
  
- #### What we'd like to improve
+- Meeting Monday, Wednesday, and Friday at set times.
+- Working in pairs went well.
 
-  
+#### What we'd like to improve
+
+- Better outlining / planning.
+- Better source control flow / branch management.
+
 #### Changes we plan to implement in next milestone period
 
+- Going through story tasks and figuring out exactly what needs to be done and the dependencies between tasks.
+- Meet more frequently next week due to shorter timeline for tasks.
   
 ## Milestone 2 (Due 12/10)
 
