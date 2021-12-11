@@ -185,7 +185,7 @@ See RetrospectiveMeetings folder in branch "main".
 |Hung| For this milestone, I worked on creating the modal dialog form for adding a new course as well as a floating action button in the Courses tab so that the user can be directed to the add course form. I also worked on implementing the Google Places autocomplete API in order to speed up the process of adding a new course. |
 |Brian| My contributions to this milestone mainly consisted of setting up the server routes for Courses and getting them hooked up to the frontend.  There was a lot of collaboration between teammates in order for us to complete our tasks. |
 |Desmond| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Josh| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Josh| For this milestone, I worked with Desmond on creating table modal that would display and list all courses in the database, in addition to being able to search for specific courses. The specific part that I worked on creating the table and populating the database. Creating table was easy for the most part, however populating it was a bit more difficult due to not quite understanding how to retrieve that data. Luckily I was able to work through it with my team members and get it working. |
 
 
 ### Testing
@@ -288,7 +288,7 @@ Testing gifs located in the repository's testGIFS file.
 |Hung| We did pretty well in terms of communication for this milestone. Everyone was able to attend our meeting times based on the schedule we agreed upon in the last TPM. When group members had questions, it was answered in a very timely manner. We all helped each other out whenever an issue would arise. |
 |Brian| I thought that communication during this milestone went really smoothly.  We implemented our plan from the previous TPM0 to meet every other day (Mon, Wed, Fri) in order to provide updates and figure out tasks for teammates.  We also responded to messages quickly in our Discord server and were able to help each other with any issues that arose. |
 |Desmond| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Josh| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Josh| Communication wise this milestone I think we did pretty well, while there may have been some confusion on what each of us were doing we were quick to respond to each other in discord and sort out any issues that arise. |
 
 
 ### Retrospective
