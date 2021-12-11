@@ -172,7 +172,7 @@ See RetrospectiveMeetings folder in branch "main".
       <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>60</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>13</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>40</td><td></td>
+     <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>13</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>40</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>26</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b></b></td><td><b></b></td><td><b>.7</b></td><td colspan="2"></td>
     </tr>
