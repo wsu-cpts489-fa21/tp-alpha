@@ -174,7 +174,7 @@ See RetrospectiveMeetings folder in branch "main".
     <tr>
      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue 46</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/65">PR 65</a></td><td>13</td><td>0</td><td>0</td><td>6.5</td><td>6.5</td><td>80</td><td> Added course table, search bar(not functional yet), filtering method, and get/post methods. Need to finish search bar implementation. Due to this issue having dependencies on parts of the implementation of other issues, coordination was more difficult and delays in the completion of dependencies slowed down developement. For that reason, I think the the story points for this issue should be increased to 18.</td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>26</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b></b></td><td><b></b></td><td><b>.7</b></td><td colspan="2"></td>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>26</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b>75</b></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
