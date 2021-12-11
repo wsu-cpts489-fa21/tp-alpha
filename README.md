@@ -264,8 +264,8 @@ Testing gifs located in the repository's testGIFS file.
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|Hung| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Brian| : I thought that communication during this milestone went really smoothly.  We implemented our plan from the previous TPM0 to meet every other day (Mon, Wed, Fri) in order to provide updates and figure out tasks for teammates.  We also responded to messages quickly in our Discord server and were able to help each other with any issues that arose. |
+|Hung| We did pretty well in terms of communication for this milestone. Everyone was able to attend our meeting times based on the schedule we agreed upon in the last TPM. When group members had questions, it was answered in a very timely manner. We all helped each other out whenever an issue would arise. |
+|Brian| I thought that communication during this milestone went really smoothly.  We implemented our plan from the previous TPM0 to meet every other day (Mon, Wed, Fri) in order to provide updates and figure out tasks for teammates.  We also responded to messages quickly in our Discord server and were able to help each other with any issues that arose. |
 |Desmond| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Josh| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
