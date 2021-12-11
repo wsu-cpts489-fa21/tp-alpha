@@ -169,7 +169,7 @@ See RetrospectiveMeetings folder in branch "main".
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>70</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>60</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
     </tr>
     <tr>
      <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>13</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>40</td><td></td>
@@ -185,7 +185,7 @@ See RetrospectiveMeetings folder in branch "main".
 |Hung| For this milestone, I worked on creating the modal dialog form for adding a new course as well as a floating action button in the Courses tab so that the user can be directed to the add course form. I also worked on implementing the Google Places autocomplete API in order to speed up the process of adding a new course. |
 |Brian| My contributions to this milestone mainly consisted of setting up the server routes for Courses and getting them hooked up to the frontend.  There was a lot of collaboration between teammates in order for us to complete our tasks. |
 |Desmond| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Josh| For this milestone, I worked with Desmond on creating table modal that would display and list all courses in the database, in addition to being able to search for specific courses. The specific part that I worked on creating the table and populating the database. Creating table was easy for the most part, however populating it was a bit more difficult due to not quite understanding how to retreive that data. Luckily I was able to work through it with my team members and get it working. |
+|Josh| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 
 
 ### Testing
@@ -272,15 +272,19 @@ Testing gifs located in the repository's testGIFS file.
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+See RetrospectiveMeetings folder in branch "main".
 
 #### What went well
+- Meeting Monday, Wednesday, and Friday at set times.
+- Working in pairs went well
+
+#### What we'd like to improve
+- Better outlining / planning 
+- Better source control flow / branch management
  
- #### What we'd like to improve
-
-  
 #### Changes we plan to implement in next milestone period
-
+- Going through story tasks and figuring out exactly what needs to be done and the dependencies between tasks
+- Meet more frequently due to shorter timeline for tasks
   
 ## Milestone 2 (Due 12/10)
 
