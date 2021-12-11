@@ -182,7 +182,7 @@ See RetrospectiveMeetings folder in branch "main".
 #### Reflection Statements
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|Hung| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Hung| For this milestone, I worked on creating the modal dialog form for adding a new course as well as a floating action button in the Courses tab so that the user can be directed to the add course form. I also worked on implementing the Google Places autocomplete API in order to speed up the process of adding a new course. |
 |Brian| My contributions to this milestone mainly consisted of setting up the server routes for Courses and getting them hooked up to the frontend.  There was a lot of collaboration between teammates in order for us to complete our tasks. |
 |Desmond| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Josh| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
