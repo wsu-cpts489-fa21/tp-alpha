@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import CourseMode from './CourseMode';
+import AddTeeModal from './AddTeeModal';
 import PlacesAutocomplete, {
     geocodeByAddress,
     geocodeByPlaceId,
@@ -18,7 +19,8 @@ class CourseForm extends React.Component {
                 location: "",
                 picture: "",
                 btnIcon: "calendar",
-                btnLabel: "Add Course"
+                btnLabel: "Add Course",
+                isAddTee: false
             };
         } else {
             this.state = this.props.courseData;
@@ -66,6 +68,11 @@ class CourseForm extends React.Component {
         const res = await this.props.saveCourse(newCourse);
         this.props.toggleModalOpen();
         this.props.setMode(CourseMode.CourseTable);
+    }
+
+    handleClickAddTee = (event) => {
+        event.preventDefault()
+        console.log("Click")
     }
 
     render() {
@@ -177,6 +184,17 @@ class CourseForm extends React.Component {
                         </label>
                         <div id="coursePicDescr" className="form-text">
                             A picture of the course (optional)
+                        </div>
+                    </div>
+                    <div className="mb-3 centered">
+                        <label className="form-label">
+                            Tee
+                        </label>
+                        <div>
+                            <AddTeeModal/>
+                        </div>
+                        <div className="form-text">
+                            Course Tee Information (optional)
                         </div>
                     </div>
                     <div className="mode-page-btn-container">
