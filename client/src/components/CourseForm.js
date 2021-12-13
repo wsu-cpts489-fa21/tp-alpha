@@ -93,7 +93,7 @@ class CourseForm extends React.Component {
                                 onChange={this.handleChange} required /> */}
                             <PlacesAutocomplete
                                 value={this.state.value}
-                                onChange={this.handleChange}
+                                onChange={value => this.setState({value})}
                                 onSelect={this.handleSelect}
                                 searchOptions={this.searchOptions}
                             >
@@ -112,15 +112,10 @@ class CourseForm extends React.Component {
                                                 const className = suggestion.active
                                                     ? 'suggestion-item--active'
                                                     : 'suggestion-item';
-                                                // inline style for demonstration purpose
-                                                const style = suggestion.active
-                                                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                                                    : { backgroundColor: '#ffffff', cursor: 'pointer' };
                                                 return (
                                                     <div
                                                         {...getSuggestionItemProps(suggestion, {
-                                                            className,
-                                                            style,
+                                                            className
                                                         })}
                                                     >
                                                         <span>{suggestion.description}</span>
