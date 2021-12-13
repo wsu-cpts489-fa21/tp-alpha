@@ -2,7 +2,7 @@
 
 const CourseMode = {
     CourseTable: "CourseTable",
-    AddCourse: "AddRound",
+    AddCourse: "AddCourse",
     EditCourse: "EditCourse"
 };
 

@@ -12,11 +12,13 @@ class CourseForm extends React.Component {
         super(props);
         if (this.props.mode === CourseMode.AddCourse) {
             this.state = {
-                course: "",
+                name: "",
                 address: "",
-                phoneNum: "",
-                geoLocation: "",
+                phoneNumber: "",
+                location: "",
                 picture: "",
+                btnIcon: "calendar",
+                btnLabel: "Add Course"
             };
         } else {
             this.state = this.props.courseData;
@@ -35,13 +37,14 @@ class CourseForm extends React.Component {
         const courseName = courseInfo[0]
         const courseAddress = results[0].formatted_address
         const latLng = await getLatLng(results[0])
+        const location = latLng.lat + ", " + latLng.lng
         this.setState({
             // ...this.state,
-            course: courseName,
+            name: courseName,
             address: courseAddress,
-            geoLocation: latLng
+            location: location
         })
-        console.log(this.state.course)
+        console.log(this.state.name)
         console.log(results)
         console.log(latLng)
     };
@@ -49,29 +52,6 @@ class CourseForm extends React.Component {
     searchOptions = {
         types: ['establishment']
     }
-
-    // handleChange = (event) => {
-    //     const name = event.target.name;
-    //     if (name === "seconds") {
-    //         const newSec = (event.target.value.length < 2 ? "0" + 
-    //         event.target.value : event.target.value);
-    //         const newSGS = this.computeSGS(this.state.strokes, this.state.minutes, 
-    //                                     newSec);
-    //         this.setState({seconds: newSec, SGS: newSGS});
-    //     } else if (name === "strokes") {
-    //         const newStrokes = event.target.value;
-    //         const newSGS = this.computeSGS(newStrokes, this.state.minutes, 
-    //         this.state.seconds);
-    //         this.setState({strokes: newStrokes, SGS: newSGS});
-    //     } else if (name === "minutes") {
-    //         const newMin = event.target.value;
-    //         const newSGS = this.computeSGS(this.state.strokes, newMin, 
-    //             this.state.seconds);
-    //         this.setState({minutes: newMin, SGS: newSGS});
-    //     } else {
-    //         this.setState({[name]: event.target.value});
-    //     }
-    // }
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -82,7 +62,8 @@ class CourseForm extends React.Component {
         const newCourse = { ...this.state };
         delete newCourse.btnIcon;
         delete newCourse.btnLabel;
-        // const res = await this.props.saveCourse(newCourse);
+        delete newCourse.value;
+        const res = await this.props.saveCourse(newCourse);
         this.props.toggleModalOpen();
         this.props.setMode(CourseMode.CourseTable);
     }
@@ -175,7 +156,7 @@ class CourseForm extends React.Component {
                             <input id="courseGeolocation" name="geolocation"
                                 className="form-control centered" type="text"
                                 aria-describedby="courseGeolocation"
-                                size="50" maxLength="50" value={JSON.stringify(this.state.geoLocation)} />
+                                size="50" maxLength="50" value={JSON.stringify(this.state.location)} />
                         </label>
                         <div id="coursePhoneNum" className="form-text">
                             Enter the course geolocation (optional)
