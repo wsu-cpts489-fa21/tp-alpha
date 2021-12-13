@@ -59,7 +59,7 @@ function AddTeeModal() {
                             <input id="teeName" name="name"
                                 className="form-control centered" type="text"
                                 aria-describedby="teeNameDescr"
-                                size="50" maxLength="50" onChange={teeNameHandler} required />
+                                size="20" maxLength="20" onChange={teeNameHandler} required />
                         </label>
                         <div id="teeNameDescr" className="form-text">
                             Enter the Tee color
