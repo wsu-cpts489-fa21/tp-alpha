@@ -30,25 +30,40 @@ class CourseForm extends React.Component {
     }
 
     handleChange = (value) => {
-        this.setState({ value });
+        const courseInfo = value.split(",")
+        const courseName = courseInfo[0]
+        this.setState({ value: courseName });
     };
 
-    handleSelect = async (value) => {
+    // getPhoneNum = async(placeID) => {
+    //     const responsePhoneNum = await fetch("https://maps.googleapis.com/maps/api/place/details/json?place_id=" + placeID +
+    //     "&fields=name%2Crating%2Cformatted_phone_number&key=" + process.env.REACT_APP_GOOGLE_API_KEY)
+
+    //     const phoneNumJSON = await responsePhoneNum.json()
+
+    //     const getPhoneNum = await fetch(phoneNumJSON.result.formatted_phone_number)
+    //     console.log(getPhoneNum)
+    // }
+
+    handleSelect = async value => {
         const results = await geocodeByAddress(value)
         const courseInfo = value.split(",")
         const courseName = courseInfo[0]
         const courseAddress = results[0].formatted_address
         const latLng = await getLatLng(results[0])
         const location = latLng.lat + ", " + latLng.lng
+        // const pID = results[0].place_id
+        // this.getPhoneNum(pID)
         this.setState({
             // ...this.state,
             name: courseName,
             address: courseAddress,
-            location: location
+            location: JSON.stringify(location)
         })
         console.log(this.state.name)
         console.log(results)
         console.log(latLng)
+        // console.log(pID)
     };
 
     searchOptions = {
@@ -93,7 +108,7 @@ class CourseForm extends React.Component {
                                 onChange={this.handleChange} required /> */}
                             <PlacesAutocomplete
                                 value={this.state.value}
-                                onChange={value => this.setState({value})}
+                                onChange={this.handleChange}
                                 onSelect={this.handleSelect}
                                 searchOptions={this.searchOptions}
                             >
@@ -136,7 +151,7 @@ class CourseForm extends React.Component {
                             <input id="courseAddress" name="address"
                                 className="form-control centered" type="text"
                                 aria-describedby="roundCourseDescr"
-                                size="50" maxLength="50" value={this.state.address} required />
+                                size="50" maxLength="50" defaultValue={this.state.address} required />
                         </label>
                         <div id="roundCourseDescr" className="form-text">
                             Enter the course address of at most 50 characters
@@ -158,7 +173,7 @@ class CourseForm extends React.Component {
                             <input id="courseGeolocation" name="geolocation"
                                 className="form-control centered" type="text"
                                 aria-describedby="courseGeolocation"
-                                size="50" maxLength="50" value={JSON.stringify(this.state.location)} />
+                                size="50" maxLength="50" defaultValue={this.state.location} />
                         </label>
                         <div id="coursePhoneNum" className="form-text">
                             Enter the course geolocation (optional)
@@ -186,7 +201,7 @@ class CourseForm extends React.Component {
                             Tee
                         </label>
                         <div>
-                            <AddTeeModal/>
+                            <AddTeeModal />
                         </div>
                         <div className="form-text">
                             Course Tee Information (optional)
