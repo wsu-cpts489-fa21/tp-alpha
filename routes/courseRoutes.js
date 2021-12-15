@@ -63,7 +63,7 @@ courseRoute.get('/courses/', async (req, res) => {
 courseRoute.get('/courses/:courseId', async (req, res) => {
   console.log("in /courses route (GET) a single course data");
   try {
-    let course = await Course.find({_id: req.params.courseId}, "tees").select("-_id");
+    let course = await Course.find({_id: req.params.courseId}).select("tees").select("-_id");
     if (!course) {
       return res.status(400).send("No course found in database");
     } else {

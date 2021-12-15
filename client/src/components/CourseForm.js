@@ -90,6 +90,31 @@ class CourseForm extends React.Component {
         console.log("Click")
     }
 
+    renderTeesTable = () => {
+        const table = [];
+        for (let r = 0; r < this.props.courses.length; ++r) {
+          table.push(
+            <tr key={r}>
+              <td>{this.props.courses[r].name}</td>
+              <td>{this.props.courses[r].location}</td>
+    
+              <td><button onClick={this.props.menuOpen ? null : () =>
+                this.props.initiateEditCourse(r)}>
+                <FontAwesomeIcon icon="eye" />
+                <FontAwesomeIcon icon="edit" />
+              </button></td>
+              <td><button onClick={this.props.menuOpen ? null :
+                () => this.props.initiateDeleteCourse(r)}>
+                <FontAwesomeIcon icon="trash" />
+              </button></td>
+            </tr>
+    
+          );
+        }
+    
+        return table;
+      }
+
     render() {
         return (
             <div id="coursesModeDialog"

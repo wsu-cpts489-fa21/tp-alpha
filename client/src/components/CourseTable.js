@@ -77,6 +77,16 @@ class CourseTable extends React.Component {
                   <FontAwesomeIcon icon="sort" />
                 </button>Location
               </th>
+              <th scope="col" role="columnheader"
+                className="cell-align-middle"
+                aria-sort="none">
+                Edit
+              </th>
+              <th scope="col" role="columnheader"
+                className="cell-align-middle"
+                aria-sort="none">
+                Delete
+              </th>
             </tr>
           </thead>
           <tbody>
