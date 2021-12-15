@@ -8,6 +8,7 @@ function AddTeeModal() {
     const [teeGolfYard, setTeeGolfYard] = useState('')
     const [teeRunYard, setTeeRunYard] = useState('')
     const [teeNumHoles, setTeeNumHoles] = useState('')
+    const [teeTimeParMultiplier, setTeeTimeParMultiplier] = useState(70)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -29,6 +30,10 @@ function AddTeeModal() {
         setTeeNumHoles(event.target.value)
     }
 
+    const teeTimeParMultiplierHandler = (event) => {
+        setTeeTimeParMultiplier(event.target.value)
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
 
@@ -36,7 +41,9 @@ function AddTeeModal() {
             name: teeName,
             golfingYardage: teeGolfYard,
             runningYardage: teeRunYard,
-            numberHoles: teeNumHoles
+            numberHoles: teeNumHoles,
+            timeParMultiplier: teeTimeParMultiplier,
+            timePar: teeTimeParMultiplier * teeRunYard
         }
 
         console.log(teeData)
@@ -101,12 +108,25 @@ function AddTeeModal() {
                             Enter the number of holes
                         </div>
                     </div>
-                    {/* <div className="mb-3 centered">
-                        <label htmlFor="roundSGS">Speedgolf Score:
-                            <input name="SGS" className="form-control centered" type="text"
-                                size="6" value={this.state.SGS} readOnly={true} />
+                    <div className="mb-3 centered">
+                        <label htmlFor="teeParMultiplier" className="form-label">Time Par Multiplier
+                            <input id="teeParMultiplier" name="parMultiplier"
+                                className="form-control centered" type="number"
+                                aria-describedby="teeParMultiplierDescr"
+                                min="70" step="1"
+                                defaultValue={teeTimeParMultiplier}
+                                onChange={teeTimeParMultiplierHandler} />
                         </label>
-                    </div> */}
+                        <div id="teeParMultiplierDescr" className="form-text">
+                            Change the par multiplier (optional)
+                        </div>
+                    </div>
+                    <div className="mb-3 centered">
+                        <label htmlFor="teeTimePars">Time pars
+                            <input id='timePars' name="timePars" className="form-control centered" type="number"
+                                size="6" value={teeTimeParMultiplier * teeRunYard} readOnly={true} />
+                        </label>
+                    </div>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="danger" onClick={handleClose}>
