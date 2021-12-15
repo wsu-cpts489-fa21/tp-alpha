@@ -16,7 +16,7 @@ const TeeSchema = new mongoose.Schema({
     } 
   });
   
-  TeeSchema.virtual('timePars').get(function() {
+  TeeSchema.virtual('timePar').get(function() {
     return (this.timeParMultiplier * this.runningYardage);
   });
 

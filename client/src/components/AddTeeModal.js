@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 
 
-function AddTeeModal() {
+function AddTeeModal(props) {
     const [teeName, setTeeName] = useState('')
     const [teeGolfYard, setTeeGolfYard] = useState('')
     const [teeRunYard, setTeeRunYard] = useState('')
@@ -41,12 +41,12 @@ function AddTeeModal() {
             name: teeName,
             golfingYardage: teeGolfYard,
             runningYardage: teeRunYard,
-            numberHoles: teeNumHoles,
+            numHoles: teeNumHoles,
             timeParMultiplier: teeTimeParMultiplier,
-            timePar: teeTimeParMultiplier * teeRunYard
+            //timePar: teeTimeParMultiplier * teeRunYard
         }
-
         console.log(teeData)
+        props.addTee(teeData);
         setShow(false)
     }
 

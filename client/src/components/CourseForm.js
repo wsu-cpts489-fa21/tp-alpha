@@ -18,6 +18,7 @@ class CourseForm extends React.Component {
                 phoneNumber: "",
                 location: "",
                 picture: "",
+                tees: [],
                 btnIcon: "calendar",
                 btnLabel: "Add Course",
                 isAddTee: false
@@ -67,7 +68,7 @@ class CourseForm extends React.Component {
     };
 
     searchOptions = {
-        types: ['establishment']
+        types: ["establishment"]
     }
 
     handleSubmit = (event) => {
@@ -76,6 +77,7 @@ class CourseForm extends React.Component {
     }
 
     handleSubmitCallback = async () => {
+        console.log(this.state.tees);
         const newCourse = { ...this.state };
         delete newCourse.btnIcon;
         delete newCourse.btnLabel;
@@ -113,6 +115,10 @@ class CourseForm extends React.Component {
         }
 
         return table;
+    }
+
+    addTee = (data) => {
+        this.setState({tees: [...this.state.tees, data]});
     }
 
     render() {
@@ -221,17 +227,7 @@ class CourseForm extends React.Component {
                             A picture of the course (optional)
                         </div>
                     </div>
-                    <div className="mb-3 centered">
-                        <label className="form-label">
-                            Tee
-                        </label>
-                        <div>
-                            <AddTeeModal />
-                        </div>
-                        <div className="form-text">
-                            Course Tee Information (optional)
-                        </div>
-                    </div>
+                  
                     <table id="courseTable" className="table table-hover caption-top">
                         <thead className="table-light">
                             <tr>
@@ -260,11 +256,23 @@ class CourseForm extends React.Component {
                         <tbody>
                             {this.props.courses == null || this.props.courses.length === 0 ?
                                 <tr>
-                                    <td colSpan="2" scope="rowgroup"><i>No tees for this course</i></td>
+                                    <td colSpan="4" scope="rowgroup"><i>No tees for this course</i></td>
                                 </tr> : this.renderTeesTable()
                             }
                         </tbody>
                     </table>
+                    <div className="mb-3 centered">
+                        <label className="form-label">
+                            Tee
+                        </label>
+                        <div>
+                            <AddTeeModal 
+                                addTee ={this.addTee}/>
+                        </div>
+                        <div className="form-text">
+                            Course Tee Information (optional)
+                        </div>
+                    </div>
                     <div className="mode-page-btn-container">
                         <button type="submit" className="mode-page-btn action-dialog action-button">
                             <FontAwesomeIcon icon={this.state.btnIcon} className={this.state.btnIcon == "spinner" ? "fa-spin" : ""} />

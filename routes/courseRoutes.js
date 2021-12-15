@@ -59,7 +59,7 @@ courseRoute.get('/courses/', async (req, res) => {
   }
 });
 
-//READ a single course tees
+//READ a single course's tees
 courseRoute.get('/courses/:courseId', async (req, res) => {
   console.log("in /courses route (GET) a single course data");
   try {
