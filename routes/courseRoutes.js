@@ -59,8 +59,21 @@ courseRoute.get('/courses/', async (req, res) => {
   }
 });
 
-
-
+//READ a single course tees
+courseRoute.get('/courses/:courseId', async (req, res) => {
+  console.log("in /courses route (GET) a single course data");
+  try {
+    let course = await Course.find({_id: req.params.courseId}, "tees").select("-_id");
+    if (!course) {
+      return res.status(400).send("No course found in database");
+    } else {
+      return res.status(200).json(JSON.stringify(course));
+    }
+  } catch (err) {
+    console.log()
+    return res.status(400).send("Unexpected error occurred when looking for courses" + err);
+  }
+});
 //UPDATE course route: Updates a specific course
 //in the course collection (PUT)
 
