@@ -93,27 +93,27 @@ class CourseForm extends React.Component {
     renderTeesTable = () => {
         const table = [];
         for (let r = 0; r < this.props.courses.length; ++r) {
-          table.push(
-            <tr key={r}>
-              <td>{this.props.courses[r].name}</td>
-              <td>{this.props.courses[r].location}</td>
-    
-              <td><button onClick={this.props.menuOpen ? null : () =>
-                this.props.initiateEditCourse(r)}>
-                <FontAwesomeIcon icon="eye" />
-                <FontAwesomeIcon icon="edit" />
-              </button></td>
-              <td><button onClick={this.props.menuOpen ? null :
-                () => this.props.initiateDeleteCourse(r)}>
-                <FontAwesomeIcon icon="trash" />
-              </button></td>
-            </tr>
-    
-          );
+            table.push(
+                <tr key={r}>
+                    <td>{this.props.courses[r].name}</td>
+                    <td>{this.props.courses[r].location}</td>
+
+                    <td><button onClick={this.props.menuOpen ? null : () =>
+                        this.props.initiateEditCourse(r)}>
+                        <FontAwesomeIcon icon="eye" />
+                        <FontAwesomeIcon icon="edit" />
+                    </button></td>
+                    <td><button onClick={this.props.menuOpen ? null :
+                        () => this.props.initiateDeleteCourse(r)}>
+                        <FontAwesomeIcon icon="trash" />
+                    </button></td>
+                </tr>
+
+            );
         }
-    
+
         return table;
-      }
+    }
 
     render() {
         return (
@@ -232,6 +232,39 @@ class CourseForm extends React.Component {
                             Course Tee Information (optional)
                         </div>
                     </div>
+                    <table id="courseTable" className="table table-hover caption-top">
+                        <thead className="table-light">
+                            <tr>
+                                <th scope='col' role="columnheader"
+                                    className="cell-align-middle"
+                                    aria-sort="none">
+                                 Name
+                                </th>
+                                <th scope="col" role="columnheader"
+                                    className=" cell-align-middle"
+                                    aria-sort="none">
+                                    Golfing Yardage
+                                </th>
+                                <th scope="col" role="columnheader"
+                                    className="cell-align-middle"
+                                    aria-sort="none">
+                                    Running Yardage
+                                </th>
+                                <th scope="col" role="columnheader"
+                                    className="cell-align-middle"
+                                    aria-sort="none">
+                                    Number of Holes
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.props.courses == null || this.props.courses.length === 0 ?
+                                <tr>
+                                    <td colSpan="2" scope="rowgroup"><i>No tees for this course</i></td>
+                                </tr> : this.renderTeesTable()
+                            }
+                        </tbody>
+                    </table>
                     <div className="mode-page-btn-container">
                         <button type="submit" className="mode-page-btn action-dialog action-button">
                             <FontAwesomeIcon icon={this.state.btnIcon} className={this.state.btnIcon == "spinner" ? "fa-spin" : ""} />
