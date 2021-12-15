@@ -443,6 +443,4 @@ See RetrospectiveMeetings folder in `main` branch.
   - Item x
   
 #### Changes we plan to implement in next milestone period
-  - Item 1
-  - Item 2
-  - Item x
+ -No other milestone periods.
