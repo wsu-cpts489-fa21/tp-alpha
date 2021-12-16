@@ -77,12 +77,22 @@ class CourseTable extends React.Component {
                   <FontAwesomeIcon icon="sort" />
                 </button>Location
               </th>
+              <th scope="col" role="columnheader"
+                className="cell-align-middle"
+                aria-sort="none">
+                View / Edit
+              </th>
+              <th scope="col" role="columnheader"
+                className="cell-align-middle"
+                aria-sort="none">
+                Delete
+              </th>
             </tr>
           </thead>
           <tbody>
             {this.props.courses == null || this.props.courses.length === 0 ?
               <tr>
-                <td colSpan="2" scope="rowgroup"><i>No courses listed</i></td>
+                <td colSpan="4" scope="rowgroup"><i>No courses listed</i></td>
               </tr> : this.renderTable()
             }
           </tbody>
