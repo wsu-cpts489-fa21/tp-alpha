@@ -436,14 +436,13 @@ Testing gifs located in the repository's testGIFS file.
 See RetrospectiveMeetings folder in `main` branch.
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - Getting as much done as we could in the time / during finals week
+  - Communication was good within the team
+  - Pair programming worked well during this milestone
   
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+  - Would like to have gotten more work done
+  - Learning more about the knowledge required to figure out the tasks within the issues
   
 #### Changes we plan to implement in next milestone period
 This was the final milestone period.
