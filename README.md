@@ -409,7 +409,7 @@ Testing gifs located in the repository's testGIFS file.
 |-------------|-------------------|
 |Hung| todo   |
 |Brian| Communication was effective during this shorter milestone period, and meetings were attended regularly and as needed. |
-|Desmond| todo  |
+|Desmond| Communication went well. No one missed any meetings and we were able to meet when necessary.  |
 |Josh| todo  |
 
 
