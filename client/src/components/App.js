@@ -31,7 +31,8 @@ class App extends React.Component {
                             addresss: "1234 test",
                             phoneNumber: "1234",
                             location: "home",
-                            picture: "png"}],
+                            picture: "png",
+                            tees: []}],
                   userData: {
                     accountData: {},
                     identityData: {},

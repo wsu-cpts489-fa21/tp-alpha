@@ -43,7 +43,7 @@ function AddTeeModal(props) {
             runningYardage: teeRunYard,
             numHoles: teeNumHoles,
             timeParMultiplier: teeTimeParMultiplier,
-            //timePar: teeTimeParMultiplier * teeRunYard
+            timePar: teeTimeParMultiplier * teeRunYard
         }
         console.log(teeData)
         props.addTee(teeData);

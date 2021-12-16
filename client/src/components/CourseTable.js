@@ -80,7 +80,7 @@ class CourseTable extends React.Component {
               <th scope="col" role="columnheader"
                 className="cell-align-middle"
                 aria-sort="none">
-                Edit
+                View / Edit
               </th>
               <th scope="col" role="columnheader"
                 className="cell-align-middle"

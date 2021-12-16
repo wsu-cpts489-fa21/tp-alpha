@@ -94,21 +94,15 @@ class CourseForm extends React.Component {
 
     renderTeesTable = () => {
         const table = [];
-        for (let r = 0; r < this.props.courses.length; ++r) {
+        for (let r = 0; r < this.state.tees.length; ++r) {
             table.push(
                 <tr key={r}>
-                    <td>{this.props.courses[r].name}</td>
-                    <td>{this.props.courses[r].location}</td>
+                    <td>{this.state.tees[r].name}</td>
+                    <td>{this.state.tees[r].golfingYardage}</td>
+                    <td>{this.state.tees[r].runningYardage}</td>
+                    <td>{this.state.tees[r].numHoles}</td>
+                    <td>{this.state.tees[r].timePar}</td>
 
-                    <td><button onClick={this.props.menuOpen ? null : () =>
-                        this.props.initiateEditCourse(r)}>
-                        <FontAwesomeIcon icon="eye" />
-                        <FontAwesomeIcon icon="edit" />
-                    </button></td>
-                    <td><button onClick={this.props.menuOpen ? null :
-                        () => this.props.initiateDeleteCourse(r)}>
-                        <FontAwesomeIcon icon="trash" />
-                    </button></td>
                 </tr>
 
             );
@@ -127,7 +121,7 @@ class CourseForm extends React.Component {
                 className="mode-page action-dialog" role="dialog"
                 aria-modal="true" aria-labelledby="courseFormHeader" tabIndex="0">
                 <h1 id="courseFormHeader" className="mode-page-header">
-                    {this.props.mode == CourseMode.AddCourse ? "Add Course" : "Edit Course"}
+                    {this.props.mode == CourseMode.AddCourse ? "Add Course" : "View / Edit Course"}
                 </h1>
                 <form id="addCourseForm"
                     onSubmit={this.handleSubmit} noValidate>
@@ -150,7 +144,7 @@ class CourseForm extends React.Component {
                                             size="50" maxLength="50"
                                             {...getInputProps({
                                             })}
-                                            value={this.state.value}
+                                            value={this.state.name}
                                         />
                                         <div className="autocomplete-dropdown-container">
                                             {loading && <div>Loading...</div>}
@@ -251,12 +245,17 @@ class CourseForm extends React.Component {
                                     aria-sort="none">
                                     Number of Holes
                                 </th>
+                                <th scope="col" role="columnheader"
+                                    className="cell-align-middle"
+                                    aria-sort="none">
+                                    Tee Time Par
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
-                            {this.props.courses == null || this.props.courses.length === 0 ?
+                            {this.state.tees == null || this.state.tees.length === 0 ?
                                 <tr>
-                                    <td colSpan="4" scope="rowgroup"><i>No tees for this course</i></td>
+                                    <td colSpan="5" scope="rowgroup"><i>No tees for this course</i></td>
                                 </tr> : this.renderTeesTable()
                             }
                         </tbody>
