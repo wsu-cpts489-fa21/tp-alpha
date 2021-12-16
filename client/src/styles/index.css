@@ -147,6 +147,10 @@ button::-moz-focus-inner {
   background-size: cover;
 }
 
+.navbar-searchClear-btn{
+  height: 16px;
+  width: 16px;
+}
 /*************************************************************************
 * CSS CLASSES FOR SIDE MENU
 *************************************************************************/

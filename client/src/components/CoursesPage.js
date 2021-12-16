@@ -24,7 +24,8 @@ class CoursesPage extends React.Component {
                         modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
-                        />
+                        filter={this.props.filter}
+                        filterResults={this.props.filterResults}/>
                         <CourseFloatingButton
                             label={"Add Course"}
                             menuOpen={this.props.menuOpen}

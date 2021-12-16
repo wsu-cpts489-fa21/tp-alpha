@@ -25,13 +25,14 @@ class App extends React.Component {
     this.state = {mode: AppMode.LOGIN,
                   menuOpen: false,
                   modalOpen: false,
+                  filter: "",
                   editId: -1,
                   courseEditId: -1,
-                  courses: [{name: "test",
-                            addresss: "1234 test",
-                            phoneNumber: "1234",
-                            location: "home",
-                            picture: "png"}],
+                  courses: [{name: "",
+                            addresss: "",
+                            phoneNumber: "",
+                            location: "",
+                            picture: ""}],
                   userData: {
                     accountData: {},
                     identityData: {},
@@ -277,8 +278,12 @@ class App extends React.Component {
       return(" Round could not be deleted. " + resText);
       }
   }
-
   //Course management methods
+
+filterResults = (val) =>{
+  this.setState({filter: val})
+}
+
 updateCourse = async(newCourseData) => {
   const newCourses = [...this.state.courses];
 
@@ -356,11 +361,13 @@ deleteCourse = async(id) => {
                 modalOpen={this.state.modalOpen}
                 toggleModalOpen={this.toggleModalOpen}
                 userData={this.state.userData}
-                updateUserData={this.updateUserData} /> 
+                updateUserData={this.updateUserData}
+                 /> 
         <ModeTabs mode={this.state.mode}
                   setMode={this.setMode} 
                   menuOpen={this.state.menuOpen}
-                  modalOpen={this.state.modalOpen}/> 
+                  modalOpen={this.state.modalOpen}
+                  /> 
         {this.state.menuOpen  ? <SideMenu logOut={this.logOut}/> : null}
         {
           {LoginMode:
@@ -390,10 +397,12 @@ deleteCourse = async(id) => {
                         addCourse={this.addCourse}
                         updateCourse={this.updateCourse}
                         deleteCourse={this.deleteCourse}
+                        filter={this.state.filter}
                         modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
-                        userId={this.state.userId}/>,
+                        userId={this.state.userId}
+                        filterResults={this.filterResults}/>,
           BuddiesMode:
             <BuddiesPage modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 
