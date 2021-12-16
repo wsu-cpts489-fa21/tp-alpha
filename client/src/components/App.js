@@ -276,6 +276,7 @@ filterResults = (val) =>{
   this.setState({filter: val})
 }
 
+
 editCourse = async(newCourseData) => {
   const newCourses = [...this.state.courses];
 
@@ -421,7 +422,8 @@ deleteCourse = async(id) => {
                         toggleModalOpen={this.toggleModalOpen} 
                         menuOpen={this.state.menuOpen}
                         userId={this.state.userId}
-                        filterResults={this.filterResults}/>,
+                        filterResults={this.filterResults}
+                        showReviews={this.showReviews}/>,
           BuddiesMode:
             <BuddiesPage modalOpen={this.state.modalOpen}
                         toggleModalOpen={this.toggleModalOpen} 

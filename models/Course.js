@@ -6,7 +6,7 @@ const CourseSchema = new mongoose.Schema({
     phoneNumber: {type: String, required: false},
     location: {type: String, required: false},
     picture: {type: String, required: false},
-    stars: 0.0,
+    stars: [],
     reviews: [],
     numRounds: 0,
     rank: 0

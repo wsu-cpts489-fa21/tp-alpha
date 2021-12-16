@@ -3,17 +3,25 @@ import CourseMode from './CourseMode';
 import CourseTable from './CourseTable';
 import CourseFloatingButton from './CourseFloatingButton';
 import CourseForm from './CourseForm';
+import CourseReviews from './CourseReviews';
 
 class CoursesPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { mode: CourseMode.CourseTable,
                         courseEditId: -1,
-                        courseDeleteId: -1 };
+                        courseDeleteId: -1,
+                        courseIndex: 0 };
     }
 
     setMode = (newMode) => {
         this.setState({ mode: newMode });
+    }
+
+    showReviews = (courseVal) =>{
+        this.setState({courseIndex: courseVal},
+                        this.props.toggleModalOpen)
+        this.setMode(CourseMode.CourseReview)
     }
 
     initiateEditCourse = (val) => {
@@ -44,6 +52,7 @@ class CoursesPage extends React.Component {
                         filterResults={this.props.filterResults}
                         initiateDeleteCourse={this.initiateDeleteCourse}
                         initiateEditCourse={this.initiateEditCourse}
+                        showReviews={this.showReviews}
                         />
                         <CourseFloatingButton
                             label={"Add Course"}
@@ -68,6 +77,24 @@ class CoursesPage extends React.Component {
                     saveCourse={this.props.editCourse}
                     setMode={this.setMode}
                     toggleModalOpen={this.props.toggleModalOpen} />
+                );
+            case CourseMode.CourseReview:
+                return(
+                    <>
+                        <CourseReviews mode={this.state.mode}
+                        courses={this.props.courses}
+                        courseIndex = {this.state.courseIndex}
+                        showReviews = {this.showReviews}
+                        setMode={this.setMode}
+                        toggleModalOpen={this.props.toggleModalOpen}
+                        />
+
+                        <CourseFloatingButton
+                            label={"Exit Reviews"}
+                            menuOpen={this.props.menuOpen}
+                            action={() => this.setState({ mode: CourseMode.CourseTable },
+                                this.props.toggleModalOpen)} />
+                    </>
                 );
         }
     }
