@@ -121,6 +121,7 @@ class CourseForm extends React.Component {
                     <td>{this.state.tees[r].golfingYardage}</td>
                     <td>{this.state.tees[r].runningYardage}</td>
                     <td>{this.state.tees[r].numHoles}</td>
+                    <td>{this.state.tees[r].timeParMultiplier}</td>
                     <td>{this.state.tees[r].timePar}</td>
 
                 </tr>
@@ -272,6 +273,11 @@ class CourseForm extends React.Component {
                                 <th scope="col" role="columnheader"
                                     className="cell-align-middle"
                                     aria-sort="none">
+                                    Time Par multiplier
+                                </th>
+                                <th scope="col" role="columnheader"
+                                    className="cell-align-middle"
+                                    aria-sort="none">
                                     Tee Time Par
                                 </th>
                             </tr>
@@ -279,7 +285,7 @@ class CourseForm extends React.Component {
                         <tbody>
                             {this.state.tees == null || this.state.tees.length === 0 ?
                                 <tr>
-                                    <td colSpan="5" scope="rowgroup"><i>No tees for this course</i></td>
+                                    <td colSpan="6" scope="rowgroup"><i>No tees for this course</i></td>
                                 </tr> : this.renderTeesTable()
                             }
                         </tbody>
