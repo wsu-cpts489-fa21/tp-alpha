@@ -409,7 +409,7 @@ Testing gifs located in the repository's testGIFS file.
 |-------------|-------------------|
 |Hung| todo   |
 |Brian| Communication was effective during this shorter milestone period, and meetings were attended regularly and as needed. |
-|Desmond| Communication went well. No one missed any meetings and we were able to meet when necessary.  |
+|Desmond| todo  |
 |Josh| todo  |
 
 
@@ -418,13 +418,13 @@ Testing gifs located in the repository's testGIFS file.
 See RetrospectiveMeetings folder in `main` branch.
 
 #### What went well
-  - Getting as much done as we could in the time / during finals week
-  - Communication was good within the team
-  - Pair programming worked well during this milestone
+  - Getting as much done as we could in the time / during finals week. Worked a lot on the project.
+  - Communication was good within the team.  Quick response time in Discord, and regular meetings.
+  - Pair programming worked well during this milestone.  Allowed for more coordinated coding.
   
  #### What we'd like to improve
-  - Would like to have gotten more work done
-  - Learning more about the knowledge required to figure out the tasks within the issues
+  - Would like to have gotten more work done / finish an issue overall rather than partial / most completions.
+  - Gaining more knowledge required to figure out the tasks within the issues such as Mongoose queries.
   
 #### Changes we plan to implement in next milestone period
 This was the final milestone period.
