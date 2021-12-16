@@ -296,6 +296,25 @@ button::-moz-focus-inner {
  cursor: pointer;
 }
 
+.float2-btn {
+  position:fixed;
+  width: 130px;
+  height: 40px;
+  bottom: 20px;
+  right: 170px;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+/* float-btn:hover -- When float button is hovered, 
+change cursor to pointer */
+.float2-btn:hover {
+cursor: pointer;
+}
+
 /*************************************************************************
 * CSS CLASSES FOR FORMS
 *************************************************************************/
