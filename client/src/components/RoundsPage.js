@@ -5,15 +5,22 @@ import RoundsTable from './RoundsTable.js';
 import RoundForm from './RoundForm.js';
 import FloatingButton from './FloatingButton.js'
 import BadgesInfoFloatingButton from './BadgesInfoFloatingButton.js';
+import firstRound from '../images/firstRound.png'
+import secondRound from '../images/secondRound.png'
+import thirdRound from '../images/thirdRound.png'
 
 class RoundsPage extends React.Component {
     constructor(props) {
         super(props);
+        //this.checkBadges();
         this.state = {
             mode: RoundsMode.ROUNDSTABLE,
             deleteId: -1,
-            editId: -1
+            editId: -1,
+            badgeNum: -1
         };
+       // var numStrokes = this.props.getNumStrokes();
+        //alert(this.props.numStrokes);
     }
 
     setMode = (newMode) => {
@@ -35,14 +42,23 @@ class RoundsPage extends React.Component {
         //() => alert("Confirm delete!"));
     }
 
+    checkBadges = () => {
+        //alert(this.props.rounds.length == 1);
+        if(this.props.rounds.length == 1){
+            this.setState({badgeNum: 1});
+        }
+        else if(this.props.rounds.length == 2){
+            this.setState({badgeNum: 2});
+        }
+        else if(this.props.rounds.length == 3){
+            this.setState({badgeNum: 3});
+        }
+        alert(this.state.badgeNum);
+    }
     render() {
         switch (this.state.mode) {
             case RoundsMode.ROUNDSTABLE:
-                //<h1> Your badges </h1>
-                //if this.props.rounds.length == 1
-                //show badge 1
-                //else if this.props......
-                return (
+                return (                 
                     <>
                         <RoundsTable rounds={this.props.rounds}
                             initiateDeleteRound={this.initiateDeleteRound}
@@ -53,6 +69,12 @@ class RoundsPage extends React.Component {
                             setMode={this.setMode}
                             toggleModalOpen={this.props.toggleModalOpen}
                             menuOpen={this.props.menuOpen} />
+                              <h3> Your badge(s): </h3>
+                              <div>
+                {this.props.rounds.length == 1 ? <img src={firstRound} className='badgeImg' /> : null}
+                {this.props.rounds.length == 2 ? <img src={secondRound} className='badgeImg' /> : null}
+                {this.props.rounds.length == 3 ? <img src={thirdRound} className='badgeImg' /> : null}
+                </div>
                         <BadgesInfoFloatingButton />
                         <FloatingButton
                             icon="calendar"
@@ -64,7 +86,9 @@ class RoundsPage extends React.Component {
                 );
             case RoundsMode.LOGROUND:
                 return (
-                    <RoundForm mode={this.state.mode}
+                    <RoundForm
+                        rounds= {this.props.rounds} 
+                        mode={this.state.mode}
                         roundData={null}
                         saveRound={this.props.addRound}
                         setMode={this.setMode}
