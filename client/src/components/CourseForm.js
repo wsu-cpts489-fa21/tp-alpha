@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import CourseMode from './CourseMode';
 import AddTeeModal from './AddTeeModal';
+//import User from '/models/User.js';
 import PlacesAutocomplete, {
     geocodeByAddress,
     geocodeByPlaceId,
@@ -136,9 +137,25 @@ class CourseForm extends React.Component {
         this.setState({tees: [...this.state.tees, data]});
     }
 
+    /*
+ max SGS (from User rounds where round.course == (currentCourse youre viewing))
+
+Speedgolf record (person's name, minutes, seconds, strokes, and date)
+
+let record = await User.find({}).populate({path: 'rounds', match: {course: courseId}, sort: {SGS: -1}).
+*/
+    /*
+    getHighestScore = () =>
+    {
+        let record = User.find({}).populate({path: 'rounds', match: {course: this.state.name}, sort: {SGS: -1}});
+        console.log(record);
+    }
+    {this.props.mode == CourseMode.AddCourse ? 
+        null : this.getHighestScore()}
+*/
     render() {
         return (
-            <div id="coursesModeDialog"
+            <div id="coursesModeDialog"   
                 className="mode-page action-dialog" role="dialog"
                 aria-modal="true" aria-labelledby="courseFormHeader" tabIndex="0">
                 <h1 id="courseFormHeader" className="mode-page-header">
@@ -324,3 +341,4 @@ class CourseForm extends React.Component {
 }
 
 export default CourseForm
+
