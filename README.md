@@ -447,6 +447,15 @@ Testing gifs located in the repository's testGIFS file.
 |Desmond|   todo        |
 |Josh|  todo   |
 
+#### Reflection Statements
+| Team Member | Communication Reflection Statement |
+|-------------|-------------------|
+|Hung| todo   |
+|Brian| Communication was effective during this shorter milestone period, and meetings were attended regularly and as needed. |
+|Desmond| todo  |
+|Josh| todo  |
+
+
 ### Retrospective
 
 See RetrospectiveMeetings folder in `main` branch.
