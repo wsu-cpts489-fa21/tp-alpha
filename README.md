@@ -310,7 +310,7 @@ See RetrospectiveMeetings folder in `main` branch.
 - Going through story tasks and figuring out exactly what needs to be done and the dependencies between tasks.
 - Meet more frequently next week due to shorter timeline for tasks.
   
-## Milestone 2 (Due 12/10)
+## Milestone 2 (Due 12/16)
 
 ### Progress
 #### Issues and Story Points
@@ -325,7 +325,7 @@ See RetrospectiveMeetings folder in `main` branch.
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>70</td><td>Updated database schema, server routes, Google autofill, and implemented UI connection.  Needs some additional work on the pretty-ness of displays and allowing users to edit over the Google autocomplete.  Need to add functionality for tees.  Due to the amount of coordination required for these tasks, we would petition for this story to be work 22 points instead of 13.  There was much coordination effort needed in order to implement the database model, the routes, and the React front end correctly.</td>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>70</td><td>For this milestone, we tried to polish up and finish issue 45, allowing a user to add speed golf friendly courses to the database, edit them, and remove them.  We worked on making Google autocomplete work correctly for the courseForm, while still allowing users to manually enter / edit information.  Additionally, we added the routes for adding and getting tees, which are displayed in the courseForm itself.  Users are now able to add tees for a specific course, and are saved to the database.  Much of this work was done together and in tandem, as there was much dependency between the UI, backend, and hooking them up together.  Lastly, as time allowed, we began implementing functionality for badges earned through rounds, but didn't have time to get very far into this.</td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue 46</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/65">PR 65</a></td><td>13</td><td>0</td><td>0</td><td>6.5</td><td>6.5</td><td>80</td><td> Added course table, search bar(not functional yet), filtering method, and get/post methods. Need to finish search bar implementation. Due to this issue having dependencies on parts of the implementation of other issues, coordination was more difficult and delays in the completion of dependencies slowed down developement. For that reason, I think the the story points for this issue should be increased to 18.</td>
@@ -339,11 +339,12 @@ See RetrospectiveMeetings folder in `main` branch.
 #### Reflection Statements
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM2| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM3| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM4| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM5| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Hung| todo |
+|Brian| Worked in tandem with Hung to complete issue 45, which was adding /editing / deleting courses and using Google autocomplete. We got most of this issue done, but weren't exactly clear on the specific requirements of multiple holes within a tee (as neither of us are golfers).  We also really tried to get the max SGS score of users for a specific golf course, but struggled with this to the point that we weren't able to implement it.  Final attempt is commented out in the code.  Other than these two minor problems, issue 45 is complete.|
+|Desmond| todo |
+|Josh| todo |
+
+
 
 ### Testing
 Testing gifs located in the repository's testGIFS file.
@@ -357,17 +358,38 @@ Testing gifs located in the repository's testGIFS file.
       <th></th><th colspan="6">Post/Reply Counts</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Total</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th>
+      <th>Date</th><th>Total</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>5</td><td>2</td><td>1</td><td>1</td><td>1</td><td>0</td>
+      <td>11/21/21</td><td>6</td><td>1</td><td>3</td><td>2</td><td>0</td>
     </tr>
     <tr>
-     <td>11/12/21</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td>
+     <td>11/29/21</td><td>9</td><td>5</td><td>2</td><td>1</td><td>1</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>9</b></td><td><b>3</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td>
+    <tr>
+     <td>12/01/21</td><td>6</td><td>1</td><td>4</td><td>0</td><td>1</td>
+    </tr>
+    <tr>
+     <td>12/02/21</td><td>8</td><td>2</td><td>2</td><td>4</td><td>0</td>
+    </tr>
+    <tr>
+     <td>12/03/21</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+     <td>12/06/21</td><td>3</td><td>1</td><td>1</td><td>0</td><td>1</td>
+    </tr>
+    <tr>
+     <td>12/07/21</td><td>18</td><td>2</td><td>7</td><td>1</td><td>8</td>
+    </tr>
+    <tr>
+     <td>12/08/21</td><td>14</td><td>3</td><td>5</td><td>1</td><td>5</td>
+    </tr>
+    <tr>
+     <td>12/10/21</td><td>6</td><td>4</td><td>1</td><td>1</td><td>0</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>72</b></td><td><b>21</b></td><td><b>25</b></td><td><b>10</b></td><td><b>16</b></td>
     </tr>
   </tbody>
 </table>
@@ -379,41 +401,55 @@ Testing gifs located in the repository's testGIFS file.
       <th colspan="2"></th><th colspan="5">In attendance?</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>Turner</th>
+      <th>Date</th><th>Duration (min)</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
+      <td>11/22/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
      <tr>
-      <td>11/12/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
+      <td>11/24/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
      <tr>
-      <td>11/17/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
+      <td>11/26/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
      <tr>
-      <td>11/19/21</td><td>120</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td>
+      <td>11/29/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>340</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>0</b></td>
+     <tr>
+      <td>11/29/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+     <tr>
+      <td>12/01/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+     <tr>
+      <td>12/03/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+     <tr>
+      <td>12/06/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+     <tr>
+      <td>12/08/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+     <tr>
+      <td>12/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>600</b></td><td><b>10</b></td><td><b>10</b></td><td><b>10</b></td><td><b>10</b></td>
     </tr>
   </tbody>
 </table>
-  
-
-
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM2| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM3| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM4| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM5| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Hung|  todo               |
+|Brian| Communication was effective during this shorter milestone period, and meetings were attended regularly and as needed.  |
+|Desmond|   todo        |
+|Josh|  todo   |
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+See RetrospectiveMeetings folder in `main` branch.
 
 #### What went well
   - Item 1
