@@ -405,35 +405,17 @@ Testing gifs located in the repository's testGIFS file.
     </tr>
   </thead> 
   <tbody>
-    <tr>
-      <td>11/22/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>11/24/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>11/26/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>11/29/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>11/29/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>12/01/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>12/03/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>12/06/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
-     <tr>
-      <td>12/08/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
-    </tr>
      <tr>
       <td>12/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+      <tr>
+      <td>12/13/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+    <tr>
+      <td>12/15/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
+    <tr>
+      <td>12/16/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
     <tr><td align="right"><b>Totals:</b></td><td><b>600</b></td><td><b>10</b></td><td><b>10</b></td><td><b>10</b></td><td><b>10</b></td>
     </tr>
