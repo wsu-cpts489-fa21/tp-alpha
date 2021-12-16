@@ -298,7 +298,7 @@ button::-moz-focus-inner {
 
 .float2-btn {
   position:fixed;
-  width: 130px;
+  width: 140px;
   height: 40px;
   bottom: 20px;
   right: 170px;
@@ -438,4 +438,9 @@ cursor: pointer;
 .suggestion-item {
   background-color: #ffffff;
   cursor: 'pointer'
+}
+
+.badgeImg {
+  width: 150px;
+  height: 150px;
 }

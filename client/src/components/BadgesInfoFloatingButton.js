@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrophy } from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import Table from 'react-bootstrap/Table'
+import firstRound from '../images/firstRound.png'
+import secondRound from '../images/secondRound.png'
+import thirdRound from '../images/thirdRound.png'
 
 const BadgesInfoFloatingButton = (props) => {
     const [show, setShow] = useState(false);
@@ -18,11 +22,40 @@ const BadgesInfoFloatingButton = (props) => {
                 &nbsp;Earn Badges
             </button>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} size='lg'>
                 <Modal.Header closeButton>
                     <Modal.Title>Badges Description</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>
+                    <Table bordered>
+                        <thead>
+                            <tr>
+                                <th width="160" >Badge</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src={firstRound} className='badgeImg' />
+                                </td>
+                                <td>Play 1 round to earn this badge</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src={secondRound} className='badgeImg' />
+                                </td>
+                                <td>Play 2 rounds to earn this badge</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src={thirdRound} className='badgeImg' />
+                                </td>
+                                <td>Play 3 rounds to earn this badge</td>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={handleClose}>
                         Ok
