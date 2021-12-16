@@ -7,6 +7,8 @@ import Table from 'react-bootstrap/Table'
 import firstRound from '../images/firstRound.png'
 import secondRound from '../images/secondRound.png'
 import thirdRound from '../images/thirdRound.png'
+import mostStrokes from '../images/mostStrokes.png'
+import fastestTime from '../images/fastestTime.png'
 
 const BadgesInfoFloatingButton = (props) => {
     const [show, setShow] = useState(false);
@@ -52,6 +54,18 @@ const BadgesInfoFloatingButton = (props) => {
                                     <img src={thirdRound} className='badgeImg' />
                                 </td>
                                 <td>Play 3 rounds to earn this badge</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src={mostStrokes} className='badgeImg' />
+                                </td>
+                                <td>Get 100+ strokes for a round to earn this badge</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src={fastestTime} className='badgeImg' />
+                                </td>
+                                <td>Take 20 minutes or less to finish a round to earn this badge</td>
                             </tr>
                         </tbody>
                     </Table>
