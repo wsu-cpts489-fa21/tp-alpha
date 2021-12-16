@@ -34,6 +34,10 @@ class RoundsPage extends React.Component {
     render() {
         switch (this.state.mode) {
         case RoundsMode.ROUNDSTABLE: 
+        //<h1> Your badges </h1>
+        //if this.props.rounds.length == 1
+            //show badge 1
+        //else if this.props......
             return (
                 <>
                     <RoundsTable rounds={this.props.rounds}
