@@ -53,29 +53,6 @@ class CourseForm extends React.Component {
         types: ['establishment']
     }
 
-    // handleChange = (event) => {
-    //     const name = event.target.name;
-    //     if (name === "seconds") {
-    //         const newSec = (event.target.value.length < 2 ? "0" + 
-    //         event.target.value : event.target.value);
-    //         const newSGS = this.computeSGS(this.state.strokes, this.state.minutes, 
-    //                                     newSec);
-    //         this.setState({seconds: newSec, SGS: newSGS});
-    //     } else if (name === "strokes") {
-    //         const newStrokes = event.target.value;
-    //         const newSGS = this.computeSGS(newStrokes, this.state.minutes, 
-    //         this.state.seconds);
-    //         this.setState({strokes: newStrokes, SGS: newSGS});
-    //     } else if (name === "minutes") {
-    //         const newMin = event.target.value;
-    //         const newSGS = this.computeSGS(this.state.strokes, newMin, 
-    //             this.state.seconds);
-    //         this.setState({minutes: newMin, SGS: newSGS});
-    //     } else {
-    //         this.setState({[name]: event.target.value});
-    //     }
-    // }
-
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({ btnIcon: "spinner", btnLabel: "Saving..." }, this.handleSubmitCallback);

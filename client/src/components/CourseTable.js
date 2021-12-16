@@ -11,40 +11,27 @@ class CourseTable extends React.Component {
             if(this.props.courses[r].name.toUpperCase().indexOf(filter.toUpperCase()) > -1 || this.props.courses[r].location.toUpperCase().indexOf(filter.toUpperCase()) > -1){
                 table.push(
                     <tr key={r}>
-                        <td>{this.props.courses[r].name}</td>
-                        <td>{this.props.courses[r].location}</td>
+                      <td>{this.props.courses[r].name}</td>
+                      <td>{this.props.courses[r].location}</td>
+            
+                      <td><button onClick={this.props.menuOpen ? null : () =>
+                        this.props.initiateEditCourse(r)}>
+                        <FontAwesomeIcon icon="eye" />
+                        <FontAwesomeIcon icon="edit" />
+                      </button></td>
+                      <td><button onClick={this.props.menuOpen ? null :
+                        () => this.props.initiateDeleteCourse(r)}>
+                        <FontAwesomeIcon icon="trash" />
+                      </button></td>
                     </tr>
-
-                );
+            
+                  );
                 i++;
             }
         }
 
-        return table;
-    }
-
-    /* searchCourseTable(searchVal) {
-        searchVal = searchVal.toUpperCase(); //case insensitive
-        let tr = table.getElementsByTagName("tr");
-        let td, rowText, i;
-        let numVisibleRows = 0;
-        for (i = 1; i < tr.length; i++) {  //Loop through all table rows
-          td = tr[i].getElementsByTagName("td");
-          rowText = "";
-            rowText += td[0].textContent; //only consider Course Name column
-          if (rowText.toUpperCase().indexOf(searchVal) > -1) {
-            tr[i].style.display = ""; //show row
-            numVisibleRows++;
-          } else {
-            tr[i].style.display = "none"; //hide row
-          }
-        }
-        if (numVisibleRows == 1) {
-          courseTableCaption.textContent = "Table displaying 1 speedgolf course";
-        } else {
-          courseTableCaption.textContent = "Table displaying " + numVisibleRows + " speedgolf courses";
-        }
-      } */
+    return table;
+  }
 
     render() {
         return (
