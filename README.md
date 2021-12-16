@@ -339,7 +339,7 @@ See RetrospectiveMeetings folder in `main` branch.
 #### Reflection Statements
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|Hung| todo |
+|Hung| For this milestone, I worked with Brian on fleshing out some of the features in issue 45 from the previous TPM. We were able to make some tweaks to the Google Places autocomplete API by making the dropdown look more like a dropdown, displaying only the course name instead of the entire course name and address, and allowing the address and geolocation fields to be editable. We also tried implementing some of the features for issue 15 by adding an informational popup modal in the rounds mode that lets the user see what the available badges are and a description for how to earn each badge. |
 |Brian| Worked in tandem with Hung to complete issue 45, which was adding /editing / deleting courses and using Google autocomplete. We got most of this issue done, but weren't exactly clear on the specific requirements of multiple holes within a tee (as neither of us are golfers).  We also really tried to get the max SGS score of users for a specific golf course, but struggled with this to the point that we weren't able to implement it.  Final attempt is commented out in the code.  Other than these two minor problems, issue 45 is complete.|
 |Desmond| todo |
 |Josh| todo |
