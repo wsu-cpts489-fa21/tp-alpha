@@ -417,7 +417,7 @@ Testing gifs located in the repository's testGIFS file.
     <tr>
       <td>12/16/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>600</b></td><td><b>10</b></td><td><b>10</b></td><td><b>10</b></td><td><b>10</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>240</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td>
     </tr>
   </tbody>
 </table>
