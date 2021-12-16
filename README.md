@@ -363,33 +363,15 @@ Testing gifs located in the repository's testGIFS file.
   </thead> 
   <tbody>
     <tr>
-      <td>11/21/21</td><td>6</td><td>1</td><td>3</td><td>2</td><td>0</td>
+      <td>12/13/21</td><td>4</td><td>1</td><td>1</td><td>1</td><td>1</td>
     </tr>
     <tr>
-     <td>11/29/21</td><td>9</td><td>5</td><td>2</td><td>1</td><td>1</td>
+     <td>12/15/21</td><td>4</td><td>1</td><td>3</td><td>0</td><td>0</td>
     </tr>
     <tr>
-     <td>12/01/21</td><td>6</td><td>1</td><td>4</td><td>0</td><td>1</td>
+     <td>12/16/21</td><td>4</td><td>1</td><td>1</td><td>0</td><td>2</td>
     </tr>
-    <tr>
-     <td>12/02/21</td><td>8</td><td>2</td><td>2</td><td>4</td><td>0</td>
-    </tr>
-    <tr>
-     <td>12/03/21</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td>
-    </tr>
-    <tr>
-     <td>12/06/21</td><td>3</td><td>1</td><td>1</td><td>0</td><td>1</td>
-    </tr>
-    <tr>
-     <td>12/07/21</td><td>18</td><td>2</td><td>7</td><td>1</td><td>8</td>
-    </tr>
-    <tr>
-     <td>12/08/21</td><td>14</td><td>3</td><td>5</td><td>1</td><td>5</td>
-    </tr>
-    <tr>
-     <td>12/10/21</td><td>6</td><td>4</td><td>1</td><td>1</td><td>0</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>72</b></td><td><b>21</b></td><td><b>25</b></td><td><b>10</b></td><td><b>16</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>12</b></td><td><b>3</b></td><td><b>5</b></td><td><b>1</b></td><td><b>3</b></td>
     </tr>
   </tbody>
 </table>
