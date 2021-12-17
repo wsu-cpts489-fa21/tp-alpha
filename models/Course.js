@@ -7,6 +7,10 @@ const CourseSchema = new mongoose.Schema({
     phoneNumber: {type: String, required: false},
     location: {type: String, required: false},
     picture: {type: String, required: false},
+    stars: [],
+    reviews: [],
+    numRounds: 0,
+    rank: 0,
     tees:[TeeSchema]
   },
   {

@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../images/sslogo.png'
 import profilePic from '../images/DefaultProfilePic.jpg';
 import AppMode from './AppMode';
-import SearchBar from './SearchBar';
+
 
 class NavBar extends React.Component {
-    
+
     render() {
        return (
         <header className="navbar">  
@@ -34,7 +34,7 @@ class NavBar extends React.Component {
                     aria-label="Open Rounds Search">
                     <FontAwesomeIcon icon="search" className="navbar-btn-icon"/>
                 </button>
-                <SearchBar />
+               
                 <button id="profileBtn" type="button" 
                   className="navbar-btn navbar-profile-btn" 
                   aria-label="Account and Profile Settings"
