@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from './SearchBar';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 class CourseTable extends React.Component {
     renderTable = (filter) =>{
@@ -16,7 +17,7 @@ class CourseTable extends React.Component {
                       <td><button onClick={this.props.menuOpen ? null : () =>
                         this.props.showReviews(r)}>
                         <td>{this.props.courses[r].stars}</td>
-                        <FontAwesomeIcon icon={["fas", "book-reader"]} />
+                        <FontAwesomeIcon icon={faStar} />
                       </button></td>
             
                       <td><button onClick={this.props.menuOpen ? null : () =>
@@ -69,6 +70,11 @@ class CourseTable extends React.Component {
               <th scope="col" role="columnheader"
                 className="cell-align-middle"
                 aria-sort="none">
+                Reviews
+              </th>
+              <th scope="col" role="columnheader"
+                className="cell-align-middle"
+                aria-sort="none">
                 View / Edit
               </th>
               <th scope="col" role="columnheader"
@@ -81,7 +87,7 @@ class CourseTable extends React.Component {
           <tbody>
             {this.props.courses == null || this.props.courses.length === 0 ?
               <tr>
-                <td colSpan="4" scope="rowgroup"><i>No courses listed</i></td>
+                <td colSpan="5" scope="rowgroup"><i>No courses listed</i></td>
               </tr> : this.renderTable(this.props.filter)
             }
           </tbody>
