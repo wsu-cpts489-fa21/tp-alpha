@@ -17,6 +17,10 @@ class CourseForm extends React.Component {
                 phoneNumber: "",
                 location: "",
                 picture: "",
+                stars: [],
+                reviews: [],
+                numRounds: 0,
+                rank: 0,
                 btnIcon: "calendar",
                 btnLabel: "Add Course"
             };

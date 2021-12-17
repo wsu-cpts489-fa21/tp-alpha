@@ -15,8 +15,8 @@ class CourseTable extends React.Component {
                       <td>{this.props.courses[r].location}</td>
                       <td><button onClick={this.props.menuOpen ? null : () =>
                         this.props.showReviews(r)}>
-                        <td>{this.props.courses[r].stars}</td>    
-                        <FontAwesomeIcon icon="star" />
+                        <td>{this.props.courses[r].stars}</td>
+                        <FontAwesomeIcon icon={["fas", "book-reader"]} />
                       </button></td>
             
                       <td><button onClick={this.props.menuOpen ? null : () =>

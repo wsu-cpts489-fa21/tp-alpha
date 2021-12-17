@@ -4,6 +4,7 @@ import CourseTable from './CourseTable';
 import CourseFloatingButton from './CourseFloatingButton';
 import CourseForm from './CourseForm';
 import CourseReviews from './CourseReviews';
+import CourseWriteReview from './CourseWriteReview';
 
 class CoursesPage extends React.Component {
     constructor(props) {
@@ -24,6 +25,10 @@ class CoursesPage extends React.Component {
         this.setMode(CourseMode.CourseReview)
     }
 
+    addReview = (courseIndex, newCourseData) => {
+        this.props.passCourseEditId(courseIndex);
+        this.props.editCourse(newCourseData);
+    }
     initiateEditCourse = (val) => {
         this.setState({courseEditId: val,
                        mode: CourseMode.EditCourse}, 
@@ -90,12 +95,44 @@ class CoursesPage extends React.Component {
                         />
 
                         <CourseFloatingButton
+                            label={"Write Review"}
+                            menuOpen={this.props.menuOpen}
+                            action={() => this.setState({ mode: CourseMode.WriteReview},
+                                this.props.toggleModalOpen)} />
+
+                        <button
                             label={"Exit Reviews"}
                             menuOpen={this.props.menuOpen}
-                            action={() => this.setState({ mode: CourseMode.CourseTable },
+                            onClick={() => this.setState({ mode: CourseMode.CourseTable },
                                 this.props.toggleModalOpen)} />
                     </>
                 );
+            case CourseMode.WriteReview:
+                return(
+                    <>
+                        <CourseWriteReview mode={this.state.mode}
+                        courses={this.props.courses}
+                        setMode={this.setMode}
+                        courseIndex={this.props.courseVal}
+                        editCourse={this.props.editCourse}
+                        toggleModalOpen={this.props.toggleModalOpen}
+                        />
+
+                        <CourseFloatingButton
+                            label={"Submit"}
+                            menuOpen={this.props.menuOpen}
+                            action={() => this.setState({ mode: CourseMode.CourseReview },
+                                this.props.toggleModalOpen)} />
+
+                        <button
+                            label={"Cancel"}
+                            menuOpen={this.props.menuOpen}
+                            onClick={() => this.setState({ mode: CourseMode.CourseReview },
+                                this.props.toggleModalOpen)} />
+                        
+
+                    </>
+            );
         }
     }
 }

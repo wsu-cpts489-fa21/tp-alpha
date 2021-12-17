@@ -72,7 +72,8 @@ courseRoute.put('/courses/:courseId', async (req, res, next) => {
     !req.body.hasOwnProperty("address") ||
     !req.body.hasOwnProperty("phoneNumber") ||
     !req.body.hasOwnProperty("location") ||
-    !req.body.hasOwnProperty("picture")) {
+    !req.body.hasOwnProperty("picture") ||
+    !req.body.hasOwnProperty("reviews")) {
     //Body does not contain correct properties
     return res.status(400).send("PUT request on /courses formulated incorrectly." +
       "Body must contain all 5 required fields");

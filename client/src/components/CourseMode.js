@@ -4,7 +4,9 @@ const CourseMode = {
     CourseTable: "CourseTable",
     AddCourse: "AddCourse",
     EditCourse: "EditCourse",
-    CourseReview: "CourseReview"
+    CourseReview: "CourseReview",
+    WriteReview: "WriteReview",
+    testReview: "testReview"
 };
 
 Object.freeze(CourseMode); //This ensures that the object is immutable.
