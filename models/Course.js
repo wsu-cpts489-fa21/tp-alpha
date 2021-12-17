@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import {TeeSchema} from './Tee.js';
 
 const CourseSchema = new mongoose.Schema({
     name: {type: String, required: true},
@@ -9,7 +10,8 @@ const CourseSchema = new mongoose.Schema({
     stars: [],
     reviews: [],
     numRounds: 0,
-    rank: 0
+    rank: 0,
+    tees:[TeeSchema]
   },
   {
     toObject: {
