@@ -8,19 +8,36 @@ import BadgesInfoFloatingButton from './BadgesInfoFloatingButton.js';
 import firstRound from '../images/firstRound.png'
 import secondRound from '../images/secondRound.png'
 import thirdRound from '../images/thirdRound.png'
+import mostStrokes from '../images/mostStrokes.png'
+import fastestTime from '../images/fastestTime.png'
 
 class RoundsPage extends React.Component {
     constructor(props) {
         super(props);
         //this.checkBadges();
+        var strokes = 0;
+        for (var i = 0; i < this.props.rounds.length; i++) { 
+            strokes += this.props.rounds[i].strokes;
+           // this.setState({numStrokes: this.state.numStrokes + this.state.userData.rounds[i].strokes});
+          }
+        var minTime = 1000000000;
+        for (var i =0; i < this.props.rounds.length; i++){
+            if(this.props.rounds[i].minutes < minTime){
+                minTime = this.props.rounds[i].minutes;
+            }
+        }
+        
         this.state = {
             mode: RoundsMode.ROUNDSTABLE,
             deleteId: -1,
             editId: -1,
-            badgeNum: -1
+            badgeNum: -1,
+            totalStrokes: strokes,
+            minRoundTime: minTime
         };
        // var numStrokes = this.props.getNumStrokes();
         //alert(this.props.numStrokes);
+    
     }
 
     setMode = (newMode) => {
@@ -74,6 +91,8 @@ class RoundsPage extends React.Component {
                 {this.props.rounds.length == 1 ? <img src={firstRound} className='badgeImg' /> : null}
                 {this.props.rounds.length == 2 ? <img src={secondRound} className='badgeImg' /> : null}
                 {this.props.rounds.length == 3 ? <img src={thirdRound} className='badgeImg' /> : null}
+                {this.state.minRoundTime < 20 ? <img src={fastestTime} className='badgeImg' /> : null}
+                {this.state.totalStrokes > 100 ?  <img src={mostStrokes} className='badgeImg' /> : null}
                 </div>
                         <BadgesInfoFloatingButton />
                         <FloatingButton
