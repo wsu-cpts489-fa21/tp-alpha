@@ -310,7 +310,7 @@ See RetrospectiveMeetings folder in `main` branch.
 - Going through story tasks and figuring out exactly what needs to be done and the dependencies between tasks.
 - Meet more frequently next week due to shorter timeline for tasks.
   
-## Milestone 2 (Due 12/10)
+## Milestone 2 (Due 12/16)
 
 ### Progress
 #### Issues and Story Points
@@ -320,57 +320,58 @@ See RetrospectiveMeetings folder in `main` branch.
       <th colspan="2"></th><th colspan="6">Story Point Counts</th><th colspan="2"></th>
     </tr> 
     <tr>
-      <th>Issue</th><th>Linked PR</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>% Complete</th><th>Notes</th>
+      <th>Issue</th><th>Linked PR</th><th>Total</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th><th>% Complete</th><th>Notes</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>5</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>100</td><td></td>
+      <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/45">Issue 45,</a>  <a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/15"> Issue 15</a> </td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/66">PR 66</a></td><td>13</td><td>6.5</td><td>6.5</td><td>0</td><td>0</td><td>85</td><td>For this milestone, we tried to polish up and finish issue 45, allowing a user to add speed golf friendly courses to the database, edit them, and remove them.  We worked on making Google autocomplete work correctly for the courseForm, while still allowing users to manually enter / edit information.  Additionally, we added the routes for adding and getting tees, which are displayed in the courseForm itself.  Users are now able to add tees for a specific course, and are saved to the database.  Much of this work was done together and in tandem, as there was much dependency between the UI, backend, and hooking them up together.  Lastly, as time allowed, we began implementing functionality for badges earned through rounds based on round count, total strokes count, and minimum round time.  Issue 45 90% complete, issue 15 60% complete. </td>
     </tr>
     <tr>
-     <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>3</td><td>0</td><td>0</td><td>0</td><td>0.8</td><td>0.4</td><td>40</td><td>Updated database schema. Updated server routes. Did not implement UI.</td>
+     <td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/issues/46">Issue 46, 44</a></td><td><a href="https://github.com/wsu-cpts489-fa21/tp-alpha/pull/65">PR 65</a></td><td>13</td><td>0</td><td>0</td><td>6.5</td><td>6.5</td><td>55</td><td> Completed issue 46. Implemented most of the interactions and skeletons of the various buttons and forms in issue 44. Issue 44 has added difficulty and complexity due to needing several component layers as well as requiring the modification of the course model and many of the functions that involve courses. For ths reason, I think that the story points for this issue should be 19.</td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>8</b></td><td><b>3</b></td><td><b>1</b></td><td><b>1</b></td><td><b>0.8</b></td><td><b>0.4</b></td><td colspan="2"></td>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>26</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b>6.5</b></td><td><b>72.5%</b></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
 
+
 #### Reflection Statements
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM2| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM3| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM4| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM5| <*Required*: The story points data is unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Hung| For this milestone, I worked with Brian on fleshing out some of the features in issue 45 from the previous TPM. We were able to make some tweaks to the Google Places autocomplete API by making the dropdown look more like a dropdown, displaying only the course name instead of the entire course name and address, and allowing the address and geolocation fields to be editable. We also tried implementing some of the features for issue 15 by adding an informational popup modal in the rounds mode that lets the user see what the available badges are and a description for how to earn each badge. |
+|Brian| Worked in tandem with Hung to complete issue 45, which was adding /editing / deleting courses and using Google autocomplete. We got most of this issue done, but weren't exactly clear on the specific requirements of multiple holes within a tee (as neither of us are golfers).  We also really tried to get the max SGS score of users for a specific golf course, but struggled with this to the point that we weren't able to implement it.  Final attempt is commented out in the code.  Other than these two minor problems, issue 45 is complete.|
+|Desmond| For this milestone, I worked with Josh on completing the implementation of issue 46 and starting on issue 44. We switched to pair programming for this milestone in order to improve communication and made all of our change from one machine. All of the commits were done from Josh's account. We were able to complete issue 46, although it took a bit longer than expected due to some issues with merge conflicts. As for issue 44, we have most of the skeleton of the ui complete(most of the appropriate buttons and forms exist, though some are missing functionality).|
+|Josh| todo |
+
+
 
 ### Testing
-
-|Issue | Test File | Feature Tested | Results Summary | 
-|------|-----------|----------------|-----------------|
-|[Issue #](https://github.com/issue)| [Google.js](https://www.github.com/)|Google Authentication| [3/3 tests passed](https://yoursite.com/animated.gif) | [
-|[Issue #](https://github.com/issue)| [routes.js](https://www.github.com/)|PUT and DELETE routes for rounds | [15/15 tests passed](https://yoursite.com/animated.gif) |
+Testing gifs located in the repository's testGIFS file.
   
 ### Communication
  
-#### Slack Messages
+#### Discord Messages
 <table> 
   <thead>
     <tr>
       <th></th><th colspan="6">Post/Reply Counts</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Total</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>5</td><td>2</td><td>1</td><td>1</td><td>1</td><td>0</td>
+      <td>12/13/21</td><td>4</td><td>1</td><td>1</td><td>1</td><td>1</td>
     </tr>
     <tr>
-     <td>11/12/21</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td>
+     <td>12/15/21</td><td>4</td><td>1</td><td>3</td><td>0</td><td>0</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>9</b></td><td><b>3</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td>
+    <tr>
+     <td>12/16/21</td><td>4</td><td>1</td><td>1</td><td>0</td><td>2</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>12</b></td><td><b>3</b></td><td><b>5</b></td><td><b>1</b></td><td><b>3</b></td>
     </tr>
   </tbody>
 </table>
@@ -382,39 +383,23 @@ See RetrospectiveMeetings folder in `main` branch.
       <th colspan="2"></th><th colspan="5">In attendance?</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Duration (min)</th><th>Hung</th><th>Brian</th><th>Desmond</th><th>Josh</th>
     </tr>
   </thead> 
   <tbody>
-    <tr>
-      <td>11/9/21</td><td>17</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td>
-    </tr>
      <tr>
-      <td>11/12/21</td><td>31</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td>
+      <td>12/10/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>48</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td>
+      <tr>
+      <td>12/13/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
-  </tbody>
-</table>
-  
-#### Face-to-Face Meetings
-<table> 
-  <thead>
     <tr>
-      <th colspan="2"></th><th colspan="5">In attendance?</th><th></th>
-    </tr> 
+      <td>12/15/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
+    </tr>
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>Notes</th>
+      <td>12/16/21</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td>
     </tr>
-  </thead> 
-  <tbody>
-    <tr>
-      <td>11/10/21</td><td>45</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>We met in CUB conference room</td>
-    </tr>
-     <tr>
-      <td>11/14/21</td><td>20</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td><td>We met at Starbucks for coffee</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>65</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td><td></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>240</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td>
     </tr>
   </tbody>
 </table>
@@ -422,27 +407,24 @@ See RetrospectiveMeetings folder in `main` branch.
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM2| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM3| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM4| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM5| <*Required*: The posts/replies data is unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Hung| Everyone attended the meetings at the arranged times, communication was good, no complaints.   |
+|Brian| Communication was effective during this shorter milestone period, and meetings were attended regularly and as needed. |
+|Desmond| Communication went well. No one missed any meetings and we were able to meet when necessary.  |
+|Josh| todo  |
+
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+See RetrospectiveMeetings folder in `main` branch.
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - Getting as much done as we could in the time / during finals week. Worked a lot on the project.
+  - Communication was good within the team.  Quick response time in Discord, and regular meetings.
+  - Pair programming worked well during this milestone.  Allowed for more coordinated coding.
   
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+  - Would like to have gotten more work done / finish an issue overall rather than partial / most completions.
+  - Gaining more knowledge required to figure out the tasks within the issues such as Mongoose queries.
   
 #### Changes we plan to implement in next milestone period
-  - Item 1
-  - Item 2
-  - Item x
+This was the final milestone period.
