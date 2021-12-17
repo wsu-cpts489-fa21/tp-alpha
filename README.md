@@ -342,7 +342,7 @@ See RetrospectiveMeetings folder in `main` branch.
 |Hung| For this milestone, I worked with Brian on fleshing out some of the features in issue 45 from the previous TPM. We were able to make some tweaks to the Google Places autocomplete API by making the dropdown look more like a dropdown, displaying only the course name instead of the entire course name and address, and allowing the address and geolocation fields to be editable. We also tried implementing some of the features for issue 15 by adding an informational popup modal in the rounds mode that lets the user see what the available badges are and a description for how to earn each badge. |
 |Brian| Worked in tandem with Hung to complete issue 45, which was adding /editing / deleting courses and using Google autocomplete. We got most of this issue done, but weren't exactly clear on the specific requirements of multiple holes within a tee (as neither of us are golfers).  We also really tried to get the max SGS score of users for a specific golf course, but struggled with this to the point that we weren't able to implement it.  Final attempt is commented out in the code.  Other than these two minor problems, issue 45 is complete.|
 |Desmond| For this milestone, I worked with Josh on completing the implementation of issue 46 and starting on issue 44. We switched to pair programming for this milestone in order to improve communication and made all of our change from one machine. All of the commits were done from Josh's account. We were able to complete issue 46, although it took a bit longer than expected due to some issues with merge conflicts. As for issue 44, we have most of the skeleton of the ui complete(most of the appropriate buttons and forms exist, though some are missing functionality).|
-|Josh| todo |
+|Josh| For this milestone, I worked with Desmond we tackled the remaining functionalities in issues 44 and were able to complete them together by programming as a pair. After issue 44, we moved onto issue 46 and developed the skeleton mostly and we're just missing some functionalities. |
 
 
 
@@ -410,7 +410,7 @@ Testing gifs located in the repository's testGIFS file.
 |Hung| Everyone attended the meetings at the arranged times, communication was good, no complaints.   |
 |Brian| Communication was effective during this shorter milestone period, and meetings were attended regularly and as needed. |
 |Desmond| Communication went well. No one missed any meetings and we were able to meet when necessary.  |
-|Josh| todo  |
+|Josh| Communication was great considering it was finals week. Good responses and good meetings.  |
 
 
 ### Retrospective
