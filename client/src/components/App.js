@@ -28,6 +28,8 @@ class App extends React.Component {
                   filter: "",
                   editId: -1,
                   courseEditId: -1,
+                  numStrokes: 0,
+                  minTime: 10000000000,
                   courses: [{name: "test",
                             addresss: "1234 test",
                             phoneNumber: "1234",
@@ -43,6 +45,8 @@ class App extends React.Component {
                   authenticated: false                  
                   };
     this.getCourseData();
+   this.getNumStrokes();
+   // alert(this.state.numStrokes);
   }
 
   componentDidMount() {
@@ -56,7 +60,8 @@ class App extends React.Component {
             this.logInUser(obj.user);
           }
         })
-    } 
+    }
+    //this.getRoundStrokes(); 
   }
   
 
@@ -372,6 +377,15 @@ deleteCourse = async(id) => {
     }
   }
 
+  getNumStrokes = () => {
+    for (var i = 0; i < this.state.userData.rounds.length; i++) { 
+      this.setState({numStrokes: this.state.numStrokes + this.state.userData.rounds[i].strokes});
+    }
+    //return this.state.numStrokes;
+  //  alert(this.state.userData.rounds);
+   // alert(this.state.numStrokes);
+  }
+
   render() {
     return (
       <>
@@ -404,6 +418,8 @@ deleteCourse = async(id) => {
                       userId={this.state.userId}/>,
           RoundsMode:
             <RoundsPage rounds={this.state.userData.rounds}
+                        numStrokes ={this.state.numStrokes}
+                        getNumStrokes={this.getNumStrokes}
                         passEditId = {this.passEditId}
                         addRound={this.addRound}
                         updateRound={this.updateRound}

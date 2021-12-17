@@ -80,7 +80,7 @@ class CourseTable extends React.Component {
           <tbody>
             {this.props.courses == null || this.props.courses.length === 0 ?
               <tr>
-                <td colSpan="2" scope="rowgroup"><i>No courses listed</i></td>
+                <td colSpan="4" scope="rowgroup"><i>No courses listed</i></td>
               </tr> : this.renderTable(this.props.filter)
             }
           </tbody>

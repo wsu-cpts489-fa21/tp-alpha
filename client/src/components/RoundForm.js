@@ -65,6 +65,16 @@ class RoundForm extends React.Component {
         delete newRound.btnIcon;
         delete newRound.btnLabel;
         const res = await this.props.saveRound(newRound);
+        //alert("You've earned a new badge!");
+        if(this.props.rounds.length == 1){
+          alert("Congratulations! You've earned a new badge for playing 1 round!");
+        }
+        if(this.props.rounds.length == 2){
+          alert("Congratulations! You've earned a new badge for playing 2 rounds!");
+        }
+        if(this.props.rounds.length == 3){
+          alert("Congratulations! You've earned a new badge for playing 3 rounds!");
+        }
         this.props.toggleModalOpen();
         this.props.setMode(RoundsMode.ROUNDSTABLE);
     }
