@@ -43,6 +43,7 @@ class CourseTable extends React.Component {
       <div id="courseModeTab" className="mode-page" role="tabpanel"
         aria-label="Course Tab" tabIndex="0">
         <h1 className="mode-page-header">Course Listings</h1>
+        <SearchBar filterResults={this.props.filterResults} />
         <table id="courseTable" className="table table-hover caption-top">
           <caption id="courseTableCaption" aria-live="polite">
             {"Displaying " + this.props.courses.length + " results"}
